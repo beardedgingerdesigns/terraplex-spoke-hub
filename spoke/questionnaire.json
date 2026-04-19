@@ -1,0 +1,59 @@
+{
+  "fields": {
+    "drones": {
+      "label": "Drones carried",
+      "allowedValues": ["r-32", "i-19"],
+      "multiple": true,
+      "required": true
+    },
+    "competitorDrones": {
+      "label": "Other drone brands carried",
+      "allowedValues": ["DJI", "XAG", "EAVision"],
+      "multiple": true,
+      "required": false,
+      "note": "Acknowledged but not featured on dealer sites. Don't list specific non-GTEEX model names."
+    },
+    "additionalEquipment": {
+      "label": "Additional equipment",
+      "allowedValues": ["trailers", "skids", "drone cleaners", "software", "drift control agents"],
+      "multiple": true,
+      "required": false
+    },
+    "services": {
+      "label": "Services offered",
+      "allowedValues": [
+        "Drone Sales",
+        "Custom Spraying/Application",
+        "Service & Repair",
+        "Parts",
+        "Training & Certification",
+        "Regulatory Support",
+        "Mapping & Data",
+        "Consulting"
+      ],
+      "multiple": true,
+      "required": true
+    },
+    "brandVibe": {
+      "label": "Brand vibe",
+      "allowedValues": [
+        "Clean/Professional",
+        "Bold/Edgy",
+        "Farm-focused/Down-to-earth",
+        "Modern/Tech-forward",
+        "Patriotic",
+        "Luxury/Premium"
+      ],
+      "multiple": false,
+      "required": true,
+      "note": "Used to guide archetype selection. See archetypes/_index.json `vibes` arrays for the mapping."
+    },
+    "formFields": {
+      "label": "Contact form complexity",
+      "allowedValues": ["basic", "qualified"],
+      "multiple": false,
+      "required": true,
+      "note": "basic = Name/Email/Phone/Message. qualified = adds Acres/Crop/Platform."
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "archetypes": [
+    {
+      "id": "forge",
+      "displayName": "Forge",
+      "tagline": "Dark dominant. Dramatic.",
+      "file": "forge.md",
+      "vibes": ["Bold/Edgy", "Modern/Tech-forward"],
+      "takenBy": [
+        { "dealer": "pyro-ag", "accent": "#ea580c" }
+      ]
+    },
+    {
+      "id": "tactical",
+      "displayName": "Tactical",
+      "tagline": "Dark dominant. Precision-engineered.",
+      "file": "tactical.md",
+      "vibes": ["Bold/Edgy", "Modern/Tech-forward"],
+      "takenBy": [
+        { "dealer": "black-knight", "accent": "#EFBF04" }
+      ]
+    },
+    {
+      "id": "terrain",
+      "displayName": "Terrain",
+      "tagline": "Alternating light/dark sections. Topographic.",
+      "file": "terrain.md",
+      "vibes": ["Clean/Professional", "Modern/Tech-forward"],
+      "takenBy": [
+        { "dealer": "new-heights", "accent": "#F36B21" }
+      ]
+    },
+    {
+      "id": "clean",
+      "displayName": "Clean",
+      "tagline": "Light dominant. Corporate-professional.",
+      "file": "clean.md",
+      "vibes": ["Clean/Professional", "Luxury/Premium"],
+      "takenBy": [
+        { "dealer": "great-river", "accent": "#00392b" }
+      ]
+    },
+    {
+      "id": "field",
+      "displayName": "Field",
+      "tagline": "Light with earth tones. Agricultural.",
+      "file": "field.md",
+      "vibes": ["Farm-focused/Down-to-earth"],
+      "takenBy": []
+    },
+    {
+      "id": "patriot",
+      "displayName": "Patriot",
+      "tagline": "Bold, American-flag-inspired.",
+      "file": "patriot.md",
+      "vibes": ["Patriotic"],
+      "takenBy": []
+    }
+  ],
+  "uniquenessRule": "No two dealer sites should use the same archetype + accent color combination. When onboarding a new dealer, check the `takenBy` arrays before proposing an archetype/accent. Update this file when a dealer is onboarded or their archetype/accent changes."
+}

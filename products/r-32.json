@@ -1,0 +1,47 @@
+{
+  "id": "r-32",
+  "officialName": "R-32 by Revolution Drones",
+  "tagline": "Revolutionizing Precision Agriculture",
+  "dealerHeadline": "R-32 Revolution Drone",
+  "dealerSubtitle": "The Next Generation of High-Capacity Drone Application",
+  "bodyCopyFile": "r-32.md",
+  "specs": [
+    {
+      "stat": "1,200–1,600",
+      "label": "Acres Per Day",
+      "description": "Can cover 1,200 to 1,600 acres per day — complete large-scale spraying or spreading operations quickly."
+    },
+    {
+      "stat": "43 MPH",
+      "label": "Application Speed",
+      "description": "With spray swath width of 45–60 feet — covering a greater width at a faster speed."
+    },
+    {
+      "stat": "32 Gallon",
+      "label": "Tank",
+      "description": "330-pound dry tank / 330-pound maximum payload — eliminates the need for multiple specialized machines."
+    },
+    {
+      "stat": "360° Radar",
+      "label": "+ Forward LiDAR",
+      "description": "Engineered for tough terrain access. Easily operates in uneven, muddy, or otherwise inaccessible areas."
+    }
+  ],
+  "additionalClaim": "Industry-leading warranty.",
+  "benefits": [
+    "Reduce Input Losses",
+    "Lower Operating Costs",
+    "Tough Terrain Access",
+    "Multi-role Functionality",
+    "Sustainable Operations"
+  ],
+  "assetRefs": {
+    "productImage": "r32ProductImage",
+    "specSheet": "r32SpecSheet"
+  },
+  "ctas": [
+    { "label": "Request Pricing", "target": "#contact", "primary": true },
+    { "label": "Download Spec Brochure", "target": "assetRef:r32SpecSheet", "primary": false }
+  ],
+  "sourceDisclaimer": "Source: official Terraplex sell sheet. Do not paraphrase or change the spec numbers."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "i-19",
+  "officialName": "I-19 by Revolution Drones",
+  "dealerHeadline": "I-19 Revolution Drone",
+  "dealerSubtitle": "Precision Power for Modern Agriculture",
+  "bodyCopyFile": "i-19.md",
+  "specs": [
+    {
+      "stat": "600",
+      "label": "Acres",
+      "description": "Maximize your application window with rapid charging and high-volume cycles."
+    },
+    {
+      "stat": "31 MPH",
+      "label": "Application Speed",
+      "description": "Coupled with a 40-foot spray swath — covering a greater width at a faster speed."
+    },
+    {
+      "stat": "20 Gallon",
+      "label": "Tank",
+      "description": "High-volume capacity for fewer refills, ensuring non-stop productivity during peak season. Also spreads 26 gallons of solids."
+    },
+    {
+      "stat": "360° Radar",
+      "label": "+ RTK Accuracy",
+      "description": "Pinpoint ±4 inch precision in all terrain — navigating uneven, muddy, or otherwise inaccessible areas."
+    }
+  ],
+  "additionalClaim": "Industry-leading warranty.",
+  "benefits": [
+    "Reduce Input Losses",
+    "Lower Operating Costs",
+    "Unmatched Terrain Access",
+    "Multi-role Functionality",
+    "Sustainable Operations"
+  ],
+  "assetRefs": {
+    "productImage": "i19ProductImage",
+    "specSheet": "i19SpecSheet"
+  },
+  "ctas": [
+    { "label": "Request Pricing", "target": "#contact", "primary": true },
+    { "label": "Download Spec Sheet", "target": "assetRef:i19SpecSheet", "primary": false }
+  ],
+  "sourceDisclaimer": "Source: official Terraplex sell sheet. Do not paraphrase or change the spec numbers."
+}

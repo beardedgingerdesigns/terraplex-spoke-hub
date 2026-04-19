@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/beardedgingerdesigns/terraplex-spoke-hub/blob/main/spoke/spoke.schema.json",
+  "title": "Terraplex Dealer Spoke Config",
+  "description": "Per-dealer configuration for a Terraplex dealer site. Lives as spoke.config.json in the dealer's repo and pins against a specific hub version.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["hub", "dealer", "identity", "drones", "services", "story"],
+  "properties": {
+    "_comment": {
+      "type": "string",
+      "description": "Optional human-facing comment (JSON has no native comments). Used for documentation-only files like example.spoke.config.json."
+    },
+    "hub": {
+      "type": "object",
+      "description": "Identifies which hub and which hub version this spoke builds against.",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "const": "terraplex",
+          "description": "Must be 'terraplex'. Constrains this schema to Terraplex-hub spokes."
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?$",
+          "description": "Semver version of the hub this spoke pins to. Must match a released hub.json version."
+        }
+      }
+    },
+    "dealer": {
+      "type": "object",
+      "description": "Dealer business identity and contact details.",
+      "additionalProperties": false,
+      "required": ["id", "businessName", "ownerName", "email", "phone", "location", "serviceArea"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "Kebab-case slug identifying the dealer. Used as the dealer folder name and as the 'dealer' key in archetypes/_index.json takenBy entries."
+        },
+        "businessName": {
+          "type": "string",
+          "description": "Legal or trading business name as displayed on the site."
+        },
+        "ownerName": {
+          "type": "string",
+          "description": "Primary owner or main point of contact."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Primary contact email for the dealer."
+        },
+        "phone": {
+          "type": "string",
+          "description": "Primary contact phone number as it should appear on the site."
+        },
+        "location": {
+          "type": "object",
+          "description": "Physical headquarters location of the dealer.",
+          "additionalProperties": false,
+          "required": ["city", "state"],
+          "properties": {
+            "city": { "type": "string" },
+            "state": { "type": "string" }
+          }
+        },
+        "serviceArea": {
+          "description": "States or regions the dealer serves. Single string (e.g. 'nationwide', 'Iowa') or an array of state names.",
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+          ]
+        }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "description": "Visual identity choices that drive the dealer site's look and messaging.",
+      "additionalProperties": false,
+      "required": ["archetype", "accentColor", "headline", "tagline", "logo"],
+      "properties": {
+        "archetype": {
+          "type": "string",
+          "enum": ["forge", "tactical", "terrain", "clean", "field", "patriot"],
+          "description": "Design archetype id from archetypes/_index.json. Determines theme, hero treatment, card style, and typography approach."
+        },
+        "accentColor": {
+          "type": "string",
+          "pattern": "^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$",
+          "description": "Hex color used as the single brand accent. Archetype + accent combination must be unique across all dealers (see archetypes/_index.json)."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Hero headline unique to this dealer."
+        },
+        "tagline": {
+          "type": "string",
+          "description": "Short tagline or supporting headline used alongside the main headline."
+        },
+        "logo": {
+          "type": "object",
+          "description": "Dealer logo. Either an image (file or URL) or a text wordmark.",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["image", "wordmark"],
+              "description": "'image' uses src (file path or URL). 'wordmark' uses text."
+            },
+            "src": {
+              "type": "string",
+              "description": "Image source (required when type is 'image'). Can be a repo-relative path or an absolute URL."
+            },
+            "text": {
+              "type": "string",
+              "description": "Wordmark text (required when type is 'wordmark')."
+            }
+          },
+          "allOf": [
+            {
+              "if": { "properties": { "type": { "const": "image" } } },
+              "then": { "required": ["src"] }
+            },
+            {
+              "if": { "properties": { "type": { "const": "wordmark" } } },
+              "then": { "required": ["text"] }
+            }
+          ]
+        }
+      }
+    },
+    "drones": {
+      "type": "array",
+      "description": "GTEEX Revolution drone platforms carried by this dealer. Values must match product ids in products/.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": ["r-32", "i-19"]
+      },
+      "uniqueItems": true
+    },
+    "services": {
+      "type": "array",
+      "description": "Services offered by the dealer. Values constrained to questionnaire.json fields.services.allowedValues.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "Drone Sales",
+          "Custom Spraying/Application",
+          "Service & Repair",
+          "Parts",
+          "Training & Certification",
+          "Regulatory Support",
+          "Mapping & Data",
+          "Consulting"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "story": {
+      "type": "object",
+      "description": "Dealer narrative content used in About and Why-Choose sections.",
+      "additionalProperties": false,
+      "required": ["founded", "notableFacts", "ownerBio"],
+      "properties": {
+        "founded": {
+          "type": "string",
+          "description": "Year the business was founded (as a string, e.g. '2019')."
+        },
+        "notableFacts": {
+          "type": "array",
+          "description": "Short factual bullets about the dealer (veteran-owned, family farm, FAA-certified, acres covered, etc.).",
+          "items": { "type": "string" }
+        },
+        "ownerBio": {
+          "type": "string",
+          "description": "2-3 paragraph owner/founder biography, used in the About section."
+        }
+      }
+    },
+    "additionalEquipment": {
+      "type": "array",
+      "description": "Optional: additional equipment the dealer carries (trailers, skids, etc.).",
+      "items": {
+        "type": "string",
+        "enum": ["trailers", "skids", "drone cleaners", "software", "drift control agents"]
+      },
+      "uniqueItems": true
+    },
+    "competitorDrones": {
+      "type": "array",
+      "description": "Optional: non-GTEEX drone brands the dealer also carries. Acknowledged but not featured prominently on the site.",
+      "items": {
+        "type": "string",
+        "enum": ["DJI", "XAG", "EAVision"]
+      },
+      "uniqueItems": true
+    },
+    "font": {
+      "type": "string",
+      "description": "Optional font preference. 'system' (default) uses the Tailwind system stack. Other values should name a Google Font (e.g. 'Montserrat').",
+      "default": "system"
+    },
+    "social": {
+      "type": "object",
+      "description": "Optional social media URLs, used in footer icon links.",
+      "additionalProperties": false,
+      "properties": {
+        "facebook": { "type": "string", "format": "uri" },
+        "instagram": { "type": "string", "format": "uri" },
+        "youtube": { "type": "string", "format": "uri" },
+        "tiktok": { "type": "string", "format": "uri" }
+      }
+    },
+    "formFields": {
+      "type": "string",
+      "enum": ["basic", "qualified"],
+      "description": "Contact form complexity. 'basic' = Name/Email/Phone/Message. 'qualified' = adds Acres/Crop/Platform."
+    },
+    "specialRequests": {
+      "type": "array",
+      "description": "Optional: dealer special requests (scheduling, reviews integration, specific page structure, etc.). Log in dealer NOTES.md as follow-ups if they can't be done in static HTML.",
+      "items": { "type": "string" }
+    },
+    "clientQuirks": {
+      "type": "array",
+      "description": "Optional: non-obvious things the client insists on or has rejected before.",
+      "items": { "type": "string" }
+    }
+  }
+}
