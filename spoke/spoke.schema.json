@@ -80,17 +80,40 @@
       "type": "object",
       "description": "Visual identity choices that drive the dealer site's look and messaging.",
       "additionalProperties": false,
-      "required": ["archetype", "accentColor", "headline", "tagline", "logo"],
+      "required": ["archetype", "accent", "headline", "logo"],
       "properties": {
         "archetype": {
           "type": "string",
           "enum": ["forge", "tactical", "terrain", "clean", "field", "patriot"],
           "description": "Design archetype id from archetypes/_index.json. Determines theme, hero treatment, card style, and typography approach."
         },
-        "accentColor": {
-          "type": "string",
-          "pattern": "^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$",
-          "description": "Hex color used as the single brand accent. Archetype + accent combination must be unique across all dealers (see archetypes/_index.json)."
+        "accent": {
+          "type": "object",
+          "description": "Dealer's brand accent color system. Primary is the main brand color. Secondary is used when mode is 'gradient' or 'dual'.",
+          "properties": {
+            "primary": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Primary accent color as a 6-digit hex code."
+            },
+            "secondary": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Secondary accent color, required when mode is 'gradient' or 'dual'."
+            },
+            "mode": {
+              "enum": ["solid", "gradient", "dual"],
+              "description": "How the accent is applied. 'solid' uses primary only. 'gradient' uses primary-to-secondary gradients on CTAs and key elements. 'dual' treats primary and secondary as equal-weight brand colors."
+            }
+          },
+          "required": ["primary", "mode"],
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": { "properties": { "mode": { "enum": ["gradient", "dual"] } } },
+              "then": { "required": ["secondary"] }
+            }
+          ]
         },
         "headline": {
           "type": "string",
@@ -98,7 +121,7 @@
         },
         "tagline": {
           "type": "string",
-          "description": "Short tagline or supporting headline used alongside the main headline."
+          "description": "Optional subtitle shown below the headline. Most dealers have a single headline only — omit this field unless the dealer has a distinct two-line treatment."
         },
         "logo": {
           "type": "object",
@@ -166,7 +189,7 @@
       "type": "object",
       "description": "Dealer narrative content used in About and Why-Choose sections.",
       "additionalProperties": false,
-      "required": ["founded", "notableFacts", "ownerBio"],
+      "required": ["notableFacts"],
       "properties": {
         "founded": {
           "type": "string",
@@ -206,6 +229,14 @@
       "description": "Optional font preference. 'system' (default) uses the Tailwind system stack. Other values should name a Google Font (e.g. 'Montserrat').",
       "default": "system"
     },
+    "referenceSites": {
+      "type": "array",
+      "description": "URLs the dealer wants referenced for visual or structural comparison — competitors, inspiration sites, or their own existing site being replaced.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
     "social": {
       "type": "object",
       "description": "Optional social media URLs, used in footer icon links.",
@@ -218,9 +249,42 @@
       }
     },
     "formFields": {
-      "type": "string",
-      "enum": ["basic", "qualified"],
-      "description": "Contact form complexity. 'basic' = Name/Email/Phone/Message. 'qualified' = adds Acres/Crop/Platform."
+      "type": "object",
+      "description": "Contact form configuration. Every form has the base fields (Name/Email/Phone/Message). Dealers can add extra qualifying or intent fields.",
+      "properties": {
+        "base": {
+          "type": "boolean",
+          "description": "Whether to include the standard base fields (Name/Email/Phone/Message). Should be true for all dealers."
+        },
+        "extraFields": {
+          "type": "array",
+          "description": "Additional form fields specific to this dealer's sales process. Optional.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string", "description": "HTML name attribute (e.g. 'interest')." },
+              "label": { "type": "string", "description": "Human-readable label shown on the form." },
+              "type": {
+                "enum": ["text", "number", "select", "textarea"],
+                "description": "Field input type."
+              },
+              "options": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Available options when type is 'select'. Required for select, ignored otherwise."
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether this field is required. Defaults to false."
+              }
+            },
+            "required": ["name", "label", "type"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["base"],
+      "additionalProperties": false
     },
     "specialRequests": {
       "type": "array",

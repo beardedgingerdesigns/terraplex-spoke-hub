@@ -49,11 +49,16 @@
       "note": "Used to guide archetype selection. See archetypes/_index.json `vibes` arrays for the mapping."
     },
     "formFields": {
-      "label": "Contact form complexity",
-      "allowedValues": ["basic", "qualified"],
-      "multiple": false,
+      "label": "Contact form configuration",
       "required": true,
-      "note": "basic = Name/Email/Phone/Message. qualified = adds Acres/Crop/Platform."
+      "baseFields": ["name", "email", "phone", "message"],
+      "commonExtraFields": [
+        { "name": "interest", "label": "Interest dropdown (Drones/Service/Parts/Training)", "type": "select" },
+        { "name": "acres", "label": "Acres farmed", "type": "number" },
+        { "name": "crop", "label": "Primary crop", "type": "text" },
+        { "name": "platform", "label": "Current drone platform", "type": "text" }
+      ],
+      "note": "Every form includes Name/Email/Phone/Message as base fields. During onboarding, ask whether the dealer qualifies leads (add Acres/Crop/Platform) or categorizes intent (add Interest dropdown). Pyro Ag uses Interest; Great River uses Acres/Crop/Platform; most other dealers use base only."
     }
   }
 }

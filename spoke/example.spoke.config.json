@@ -2,30 +2,46 @@
   "_comment": "Reference spoke config showing the shape expected by spoke.schema.json. Real dealer configs live in their own repos. TODO values are placeholders — do not treat this file as authoritative dealer data.",
   "hub": {
     "name": "terraplex",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "dealer": {
     "id": "pyro-ag",
-    "businessName": "Pyro Ag",
-    "ownerName": "TODO",
-    "email": "TODO",
-    "phone": "TODO",
-    "location": { "city": "TODO", "state": "TODO" },
-    "serviceArea": "TODO"
+    "businessName": "Pyro Ag Services LLC",
+    "ownerName": "Taylor Ross",
+    "email": "taylor.ross@pyroagllc.com",
+    "phone": "(605) 441-6825",
+    "location": { "city": "Philip", "state": "SD" },
+    "serviceArea": "western South Dakota"
   },
   "identity": {
     "archetype": "forge",
-    "accentColor": "#ea580c",
+    "accent": {
+      "primary": "#ea580c",
+      "secondary": "#dc2626",
+      "mode": "gradient"
+    },
     "headline": "Precision Agriculture. Ignited.",
-    "tagline": "TODO",
     "logo": { "type": "image", "src": "TODO" }
   },
   "drones": ["r-32", "i-19"],
   "services": ["Drone Sales", "Custom Spraying/Application", "Service & Repair"],
   "story": {
-    "founded": "TODO",
-    "notableFacts": [],
-    "ownerBio": "TODO"
+    "notableFacts": ["Independent dealer brand", "Based in Philip, SD"]
   },
-  "formFields": "qualified"
+  "font": "system",
+  "formFields": {
+    "base": true,
+    "extraFields": [
+      {
+        "name": "interest",
+        "label": "Interest",
+        "type": "select",
+        "options": ["Drones", "Service", "Parts", "Training"],
+        "required": false
+      }
+    ]
+  },
+  "referenceSites": [
+    "https://pyroagllc.com"
+  ]
 }
