@@ -24,6 +24,8 @@
       "allowedValues": [
         "Drone Sales",
         "Custom Spraying/Application",
+        "Cover Crop Seeding",
+        "Pest Management",
         "Service & Repair",
         "Parts",
         "Training & Certification",
@@ -59,6 +61,21 @@
         { "name": "platform", "label": "Current drone platform", "type": "text" }
       ],
       "note": "Every form includes Name/Email/Phone/Message as base fields. During onboarding, ask whether the dealer qualifies leads (add Acres/Crop/Platform) or categorizes intent (add Interest dropdown). Pyro Ag uses Interest; Great River uses Acres/Crop/Platform; most other dealers use base only."
+    }
+  },
+  "normalizations": {
+    "_description": "Directional map from common variant service names to canonical values in fields.services.allowedValues. Use ONLY for unambiguous, wording-level variants (not semantic or fuzzy matches). Any HTML service name that does not exactly match a canonical value AND does not appear as a key in this table must be flagged for human review, not auto-mapped.",
+    "services": {
+      "Agricultural Drone Sales": "Drone Sales",
+      "Replacement Parts": "Parts",
+      "Drone Repair": "Service & Repair",
+      "Repairs & Diagnostics": "Service & Repair",
+      "Custom Application": "Custom Spraying/Application",
+      "Precision Spraying": "Custom Spraying/Application",
+      "Aerial Application": "Custom Spraying/Application",
+      "Aerial Spraying": "Custom Spraying/Application",
+      "Part 107 Training": "Training & Certification",
+      "Pilot Training": "Training & Certification"
     }
   }
 }

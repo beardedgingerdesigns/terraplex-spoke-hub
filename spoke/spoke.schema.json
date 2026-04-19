@@ -175,6 +175,8 @@
         "enum": [
           "Drone Sales",
           "Custom Spraying/Application",
+          "Cover Crop Seeding",
+          "Pest Management",
           "Service & Repair",
           "Parts",
           "Training & Certification",

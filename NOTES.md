@@ -2,6 +2,17 @@
 
 ## Recent decisions
 
+### 2026-04-19 — Hub v0.3.0: services list refinement
+
+- Added two canonical services: `Cover Crop Seeding`, `Pest Management` (both were in hub reference material, omitted from Phase 1 canonical list in error)
+- Added conservative normalization table at `spoke/questionnaire.json` → `normalizations.services` for 10 common near-exact variants (e.g. `Replacement Parts` → `Parts`, `Agricultural Drone Sales` → `Drone Sales`, `Custom Application` → `Custom Spraying/Application`)
+- Updated `spoke/spoke.schema.json` services enum to match the canonical list
+- Pyro Ag services array re-extracted under the new rules in the same phase: grew from `["Drone Sales"]` to 6 entries; 2 candidates still flagged for human review (`Routine Maintenance`, `Quick Response`)
+
+Why: Phase 2 canary surfaced a 1-for-9 HTML→canonical match rate on Pyro Ag. About half the gap was canonical-list omissions (fixed); the other half was wording-level variants that are unambiguous in context (handled by the normalization table). Semantic and fuzzy matches still flag — conservative naming preserved.
+
+`hub.version` `0.2.0` → `0.3.0`. `schemaVersion` stays at `1` (additive change — existing spoke configs on 0.2.0 still validate).
+
 ### 2026-04-19 — Hub v0.2.0: spoke schema refinement
 
 Following Pyro Ag dry run, five schema fixes applied before Phase 2 migration:
