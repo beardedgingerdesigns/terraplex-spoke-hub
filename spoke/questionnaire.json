@@ -1,70 +1,264 @@
 {
-  "fields": {
-    "drones": {
-      "label": "Drones carried",
-      "allowedValues": ["r-32", "i-19"],
-      "multiple": true,
-      "required": true
+  "_comment": "Authoritative source for the dealer onboarding form. The manager app renders the web form from sections[] and transforms submissions into spoke.config.json via each field's `maps` path. Every spoke.schema.json property has exactly one field here (except derived ones: dealer.id, hub.*, which the server fills in at approve time).",
+  "version": 1,
+  "sections": [
+    {
+      "id": "existing-site",
+      "title": "Existing website",
+      "description": "If you already have a website, paste it here. We'll read it automatically to pre-fill your contact info, services, hours, product prices, and social links — so you don't have to retype them.",
+      "fields": [
+        {
+          "id": "existingSiteUrl",
+          "label": "Your existing website URL",
+          "type": "url",
+          "required": false,
+          "placeholder": "https://yourbusiness.com",
+          "help": "Optional. If provided, we'll ingest content from this site on approval.",
+          "maps": "__meta.existingSiteUrl"
+        }
+      ]
     },
-    "competitorDrones": {
-      "label": "Other drone brands carried",
-      "allowedValues": ["DJI", "XAG", "EAVision"],
-      "multiple": true,
-      "required": false,
-      "note": "Acknowledged but not featured on dealer sites. Don't list specific non-GTEEX model names."
+    {
+      "id": "business",
+      "title": "Business",
+      "description": "Who you are and how customers reach you.",
+      "fields": [
+        { "id": "businessName", "label": "Legal / trading business name", "type": "text", "required": true, "placeholder": "Acme Ag Services LLC", "maps": "dealer.businessName" },
+        { "id": "ownerName", "label": "Primary contact / owner name", "type": "text", "required": true, "placeholder": "Jane Smith", "maps": "dealer.ownerName" },
+        { "id": "email", "label": "Primary email", "type": "email", "required": true, "placeholder": "jane@acmeag.com", "maps": "dealer.email" },
+        { "id": "phone", "label": "Primary phone", "type": "tel", "required": true, "placeholder": "(555) 123-4567", "maps": "dealer.phone" },
+        { "id": "city", "label": "Headquarters city", "type": "text", "required": true, "placeholder": "Bucyrus", "maps": "dealer.location.city" },
+        { "id": "state", "label": "State", "type": "text", "required": true, "placeholder": "OH", "maxLength": 2, "help": "Two-letter state code.", "maps": "dealer.location.state" },
+        { "id": "serviceArea", "label": "Service area", "type": "text", "required": true, "placeholder": "western South Dakota · Iowa · nationwide", "help": "States, regions, or \"nationwide\".", "maps": "dealer.serviceArea" }
+      ]
     },
-    "additionalEquipment": {
-      "label": "Additional equipment",
-      "allowedValues": ["trailers", "skids", "drone cleaners", "software", "drift control agents"],
-      "multiple": true,
-      "required": false
+    {
+      "id": "products",
+      "title": "Product lineup",
+      "description": "What you carry and sell.",
+      "fields": [
+        {
+          "id": "drones",
+          "label": "GTEEX Revolution drones carried",
+          "type": "checkbox-list",
+          "required": true,
+          "options": [
+            { "value": "r-32", "label": "R-32 Revolution (32-gallon high-capacity)" },
+            { "value": "i-19", "label": "I-19 Revolution (20-gallon precision)" }
+          ],
+          "minItems": 1,
+          "maps": "drones"
+        },
+        {
+          "id": "additionalEquipment",
+          "label": "Additional equipment you carry",
+          "type": "checkbox-list",
+          "required": false,
+          "options": [
+            { "value": "trailers", "label": "Trailers (Lane, custom)" },
+            { "value": "skids", "label": "Tender skids" },
+            { "value": "drone cleaners", "label": "Drone cleaners (Bryson, similar)" },
+            { "value": "software", "label": "Mapping / mission software" },
+            { "value": "drift control agents", "label": "Drift control agents" }
+          ],
+          "maps": "additionalEquipment"
+        },
+        {
+          "id": "competitorDrones",
+          "label": "Other drone brands you also carry",
+          "type": "checkbox-list",
+          "required": false,
+          "options": [
+            { "value": "DJI", "label": "DJI" },
+            { "value": "XAG", "label": "XAG" },
+            { "value": "EAVision", "label": "EAVision" }
+          ],
+          "help": "Acknowledged but not featured on your dealer site.",
+          "maps": "competitorDrones"
+        }
+      ]
     },
-    "services": {
-      "label": "Services offered",
-      "allowedValues": [
-        "Drone Sales",
-        "Custom Spraying/Application",
-        "Cover Crop Seeding",
-        "Pest Management",
-        "Service & Repair",
-        "Parts",
-        "Training & Certification",
-        "Regulatory Support",
-        "Mapping & Data",
-        "Consulting"
-      ],
-      "multiple": true,
-      "required": true
+    {
+      "id": "services",
+      "title": "Services",
+      "description": "Pick everything you actually offer.",
+      "fields": [
+        {
+          "id": "services",
+          "label": "Services offered",
+          "type": "checkbox-list",
+          "required": true,
+          "minItems": 1,
+          "options": [
+            { "value": "Drone Sales", "label": "Drone Sales" },
+            { "value": "Custom Spraying/Application", "label": "Custom Spraying / Application" },
+            { "value": "Cover Crop Seeding", "label": "Cover Crop Seeding" },
+            { "value": "Pest Management", "label": "Pest Management" },
+            { "value": "Service & Repair", "label": "Service & Repair" },
+            { "value": "Parts", "label": "Parts" },
+            { "value": "Training & Certification", "label": "Training & Certification" },
+            { "value": "Regulatory Support", "label": "Regulatory Support" },
+            { "value": "Mapping & Data", "label": "Mapping & Data" },
+            { "value": "Consulting", "label": "Consulting" }
+          ],
+          "maps": "services"
+        }
+      ]
     },
-    "brandVibe": {
-      "label": "Brand vibe",
-      "allowedValues": [
-        "Clean/Professional",
-        "Bold/Edgy",
-        "Farm-focused/Down-to-earth",
-        "Modern/Tech-forward",
-        "Patriotic",
-        "Luxury/Premium"
-      ],
-      "multiple": false,
-      "required": true,
-      "note": "Used to guide archetype selection. See archetypes/_index.json `vibes` arrays for the mapping."
+    {
+      "id": "brand",
+      "title": "Brand & visual direction",
+      "description": "How your site should look and feel.",
+      "fields": [
+        {
+          "id": "archetype",
+          "label": "Design archetype",
+          "type": "radio",
+          "required": true,
+          "help": "How the site is themed. Each dealer in the network gets a unique archetype + accent combo. Your choice is still accepted if taken; we'll discuss at review.",
+          "options": [
+            { "value": "forge", "label": "FORGE — dark, dramatic, glowing ember aesthetic" },
+            { "value": "tactical", "label": "TACTICAL — dark, geometric precision, military-industrial" },
+            { "value": "terrain", "label": "TERRAIN — alternating light/dark, topographic" },
+            { "value": "clean", "label": "CLEAN — light, corporate, minimal texture" },
+            { "value": "field", "label": "FIELD — warm earth tones, agricultural photography" },
+            { "value": "patriot", "label": "PATRIOT — red/white/blue, bold, commanding" }
+          ],
+          "takenByRef": "hubs/terraplex/archetypes/_index.json#takenBy",
+          "maps": "identity.archetype"
+        },
+        {
+          "id": "accentMode",
+          "label": "Accent color mode",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "value": "solid", "label": "Solid — one primary brand color" },
+            { "value": "gradient", "label": "Gradient — primary to secondary (e.g. orange → red)" },
+            { "value": "dual", "label": "Dual — two equal-weight brand colors" }
+          ],
+          "maps": "identity.accent.mode"
+        },
+        { "id": "accentPrimary", "label": "Primary accent color", "type": "hex", "required": true, "placeholder": "#C8102E", "help": "Six-digit hex code.", "maps": "identity.accent.primary" },
+        { "id": "accentSecondary", "label": "Secondary accent color", "type": "hex", "required": false, "placeholder": "#A00D24", "help": "Required if mode is Gradient or Dual.", "maps": "identity.accent.secondary" },
+        { "id": "font", "label": "Font preference", "type": "text", "required": false, "placeholder": "Montserrat (or leave blank for system stack)", "help": "Leave blank for the default Tailwind system stack. Otherwise name a Google Font.", "maps": "font" }
+      ]
     },
-    "formFields": {
-      "label": "Contact form configuration",
-      "required": true,
-      "baseFields": ["name", "email", "phone", "message"],
-      "commonExtraFields": [
-        { "name": "interest", "label": "Interest dropdown (Drones/Service/Parts/Training)", "type": "select" },
-        { "name": "acres", "label": "Acres farmed", "type": "number" },
-        { "name": "crop", "label": "Primary crop", "type": "text" },
-        { "name": "platform", "label": "Current drone platform", "type": "text" }
-      ],
-      "note": "Every form includes Name/Email/Phone/Message as base fields. During onboarding, ask whether the dealer qualifies leads (add Acres/Crop/Platform) or categorizes intent (add Interest dropdown). Pyro Ag uses Interest; Great River uses Acres/Crop/Platform; most other dealers use base only."
+    {
+      "id": "voice",
+      "title": "Voice",
+      "description": "Your hero headline — the one thing every visitor sees first.",
+      "fields": [
+        { "id": "headline", "label": "Hero headline", "type": "text", "required": true, "placeholder": "No Shortcuts. Honest Answers. Built On Trust.", "help": "Short, memorable. Periods separate lines when rendered.", "maps": "identity.headline" },
+        { "id": "tagline", "label": "Tagline (optional)", "type": "text", "required": false, "placeholder": "American-designed precision agriculture, shipped in 45 days.", "help": "Only if you have a distinct two-line treatment.", "maps": "identity.tagline" }
+      ]
+    },
+    {
+      "id": "logo",
+      "title": "Logo",
+      "description": "Either upload an image, paste a URL, or give us wordmark text.",
+      "fields": [
+        {
+          "id": "logoType",
+          "label": "Logo type",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "value": "image", "label": "Image (file upload or URL)" },
+            { "value": "wordmark", "label": "Text wordmark (e.g. \"TRUSS SERVICES LLC\")" }
+          ],
+          "maps": "identity.logo.type"
+        },
+        { "id": "logoSrc", "label": "Logo image URL or uploaded path", "type": "text", "required": false, "placeholder": "https://... or assets/logo.png", "help": "Required if logo type is Image.", "requiredIf": { "field": "logoType", "equals": "image" }, "maps": "identity.logo.src" },
+        { "id": "logoText", "label": "Wordmark text", "type": "text", "required": false, "placeholder": "ACME AG SERVICES", "help": "Required if logo type is Wordmark.", "requiredIf": { "field": "logoType", "equals": "wordmark" }, "maps": "identity.logo.text" }
+      ]
+    },
+    {
+      "id": "form-fields",
+      "title": "Contact form",
+      "description": "Every contact form has Name, Email, Phone, and Message. Add extras if they help you qualify leads.",
+      "fields": [
+        {
+          "id": "formFieldsBase",
+          "label": "Include base fields (Name / Email / Phone / Message)",
+          "type": "boolean",
+          "required": true,
+          "default": true,
+          "maps": "formFields.base"
+        },
+        {
+          "id": "formFieldsExtras",
+          "label": "Optional extra fields",
+          "type": "checkbox-list",
+          "required": false,
+          "options": [
+            { "value": "interest", "label": "Interest dropdown (\"I'm interested in Drones / Service / Parts / Training\")" },
+            { "value": "acres", "label": "Acres farmed (number)" },
+            { "value": "crop", "label": "Primary crop (text)" },
+            { "value": "platform", "label": "Current drone platform (text)" }
+          ],
+          "help": "Pick whatever fits your sales process. Most dealers use base only.",
+          "expandsTo": {
+            "interest": { "name": "interest", "label": "I'm Interested In", "type": "select", "options": ["Drones", "Service", "Parts", "Training", "Other"], "required": false },
+            "acres": { "name": "acres", "label": "Acres farmed", "type": "number", "required": false },
+            "crop": { "name": "crop", "label": "Primary crop", "type": "text", "required": false },
+            "platform": { "name": "platform", "label": "Current drone platform", "type": "text", "required": false }
+          },
+          "maps": "formFields.extraFields"
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "title": "Story",
+      "description": "A few facts so the site can speak for your business authentically.",
+      "fields": [
+        { "id": "founded", "label": "Year founded", "type": "text", "required": false, "placeholder": "2021", "maxLength": 4, "help": "4-digit year (string, e.g. '2021').", "maps": "story.founded" },
+        {
+          "id": "notableFacts",
+          "label": "Notable facts (pick any)",
+          "type": "checkbox-list",
+          "required": false,
+          "options": [
+            { "value": "Family-owned", "label": "Family-owned" },
+            { "value": "Veteran-owned", "label": "Veteran-owned" },
+            { "value": "Generational farm family", "label": "Generational farm family" },
+            { "value": "FAA-certified pilot(s) on staff", "label": "FAA-certified pilot(s) on staff" },
+            { "value": "Former crop duster", "label": "Former crop duster" },
+            { "value": "Agricultural degree / background", "label": "Agricultural degree / background" },
+            { "value": "Custom-built facility", "label": "Custom-built facility" }
+          ],
+          "help": "Choose any that apply. You can also add more below.",
+          "maps": "story.notableFacts"
+        },
+        { "id": "notableFactsOther", "label": "Other notable facts (one per line)", "type": "textarea", "required": false, "placeholder": "50,000+ acres of application experience\nChristian-faith-grounded — motto \"Never tire of doing what is good\"", "help": "One fact per line. These combine with your selected facts above.", "maps": "__meta.notableFactsOther" },
+        { "id": "ownerBio", "label": "Owner bio (optional)", "type": "textarea", "required": false, "placeholder": "2-3 paragraphs, used on your About section.", "help": "Optional. If you have an existing website, we'll pull verbatim voice samples from your About page automatically.", "maps": "story.ownerBio" }
+      ]
+    },
+    {
+      "id": "social",
+      "title": "Social media",
+      "description": "Optional. Only fill the ones you actually use.",
+      "fields": [
+        { "id": "facebook", "label": "Facebook URL", "type": "url", "required": false, "placeholder": "https://www.facebook.com/...", "maps": "social.facebook" },
+        { "id": "instagram", "label": "Instagram URL", "type": "url", "required": false, "placeholder": "https://www.instagram.com/...", "maps": "social.instagram" },
+        { "id": "youtube", "label": "YouTube URL", "type": "url", "required": false, "placeholder": "https://www.youtube.com/@...", "maps": "social.youtube" },
+        { "id": "tiktok", "label": "TikTok URL", "type": "url", "required": false, "placeholder": "https://www.tiktok.com/@...", "maps": "social.tiktok" }
+      ]
+    },
+    {
+      "id": "quirks",
+      "title": "Quirks + special requests",
+      "description": "Short bullets — anything non-obvious we should know before building.",
+      "fields": [
+        { "id": "clientQuirks", "label": "Things you insist on or have rejected before", "type": "textarea", "required": false, "placeholder": "Don't use the word \"crop dusting\" — we hate it.\nDon't show DJI Agras T100 by model name, just a generic mention.\nAlways include both Tom's and James's phone numbers.", "help": "One item per line.", "splitLines": true, "maps": "clientQuirks" },
+        { "id": "specialRequests", "label": "Integrations or features you want", "type": "textarea", "required": false, "placeholder": "Call scheduling in the contact form\nGoogle Reviews live feed\nInstagram grid embed", "help": "One per line. Some may be future-feature asks; we'll flag anything static HTML can't do.", "splitLines": true, "maps": "specialRequests" },
+        { "id": "referenceSites", "label": "Reference / inspiration sites (one URL per line)", "type": "textarea", "required": false, "placeholder": "https://somedealer.com\nhttps://somesite.com", "help": "Sites you like the look of.", "splitLines": true, "maps": "referenceSites" }
+      ]
     }
-  },
+  ],
   "normalizations": {
-    "_description": "Directional map from common variant service names to canonical values in fields.services.allowedValues. Use ONLY for unambiguous, wording-level variants (not semantic or fuzzy matches). Any HTML service name that does not exactly match a canonical value AND does not appear as a key in this table must be flagged for human review, not auto-mapped.",
+    "_description": "Directional map from common variant service names to canonical values in sections[].fields where id is 'services'. Use ONLY for unambiguous wording-level variants. Kept from prior hub version for service normalization during ingest.",
     "services": {
       "Agricultural Drone Sales": "Drone Sales",
       "Replacement Parts": "Parts",

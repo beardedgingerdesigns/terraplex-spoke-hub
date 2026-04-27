@@ -43,6 +43,7 @@ Each file is authoritative for a specific domain. When the same topic appears in
 | `content/reusable-language.md` | Quoted language from the Terraplex corporate site, safe to reuse verbatim |
 | `content/content-exclusions.md` | What must never appear on a dealer site |
 | `content/service-patterns.md` | Reusable service structures (Sam Welton contact, service tiers, Part 107 prep) |
+| `content/pricing-policy.md` | MAP policy, MSRP-only rule, kit-tier exposure rule |
 | `products/r-32.json` + `r-32.md` | R-32 product data and official sell-sheet body copy |
 | `products/i-19.json` + `i-19.md` | I-19 product data and official sell-sheet body copy |
 | `archetypes/_index.json` | Archetype catalog + which dealer owns which archetype+accent combo |

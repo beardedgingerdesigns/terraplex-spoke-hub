@@ -5,9 +5,15 @@
       "displayName": "Forge",
       "tagline": "Dark dominant. Dramatic.",
       "file": "forge.md",
-      "vibes": ["Bold/Edgy", "Modern/Tech-forward"],
+      "vibes": [
+        "Bold/Edgy",
+        "Modern/Tech-forward"
+      ],
       "takenBy": [
-        { "dealer": "pyro-ag", "accent": "#ea580c" }
+        {
+          "dealer": "pyro-ag",
+          "accent": "#ea580c"
+        }
       ]
     },
     {
@@ -15,9 +21,15 @@
       "displayName": "Tactical",
       "tagline": "Dark dominant. Precision-engineered.",
       "file": "tactical.md",
-      "vibes": ["Bold/Edgy", "Modern/Tech-forward"],
+      "vibes": [
+        "Bold/Edgy",
+        "Modern/Tech-forward"
+      ],
       "takenBy": [
-        { "dealer": "black-knight", "accent": "#EFBF04" }
+        {
+          "dealer": "black-knight",
+          "accent": "#EFBF04"
+        }
       ]
     },
     {
@@ -25,9 +37,15 @@
       "displayName": "Terrain",
       "tagline": "Alternating light/dark sections. Topographic.",
       "file": "terrain.md",
-      "vibes": ["Clean/Professional", "Modern/Tech-forward"],
+      "vibes": [
+        "Clean/Professional",
+        "Modern/Tech-forward"
+      ],
       "takenBy": [
-        { "dealer": "new-heights", "accent": "#F36B21" }
+        {
+          "dealer": "new-heights",
+          "accent": "#F36B21"
+        }
       ]
     },
     {
@@ -35,9 +53,19 @@
       "displayName": "Clean",
       "tagline": "Light dominant. Corporate-professional.",
       "file": "clean.md",
-      "vibes": ["Clean/Professional", "Luxury/Premium"],
+      "vibes": [
+        "Clean/Professional",
+        "Luxury/Premium"
+      ],
       "takenBy": [
-        { "dealer": "great-river", "accent": "#00392b" }
+        {
+          "dealer": "great-river",
+          "accent": "#00392b"
+        },
+        {
+          "dealer": "test-site",
+          "accent": "#B91D1D"
+        }
       ]
     },
     {
@@ -45,7 +73,9 @@
       "displayName": "Field",
       "tagline": "Light with earth tones. Agricultural.",
       "file": "field.md",
-      "vibes": ["Farm-focused/Down-to-earth"],
+      "vibes": [
+        "Farm-focused/Down-to-earth"
+      ],
       "takenBy": []
     },
     {
@@ -53,8 +83,15 @@
       "displayName": "Patriot",
       "tagline": "Bold, American-flag-inspired.",
       "file": "patriot.md",
-      "vibes": ["Patriotic"],
-      "takenBy": []
+      "vibes": [
+        "Patriotic"
+      ],
+      "takenBy": [
+        {
+          "dealer": "trussservicesllc-com-com",
+          "accent": "#C8102E"
+        }
+      ]
     }
   ],
   "uniquenessRule": "No two dealer sites should use the same archetype + accent color combination. When onboarding a new dealer, check the `takenBy` arrays before proposing an archetype/accent. Update this file when a dealer is onboarded or their archetype/accent changes."

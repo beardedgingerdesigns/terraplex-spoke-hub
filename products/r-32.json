@@ -28,6 +28,14 @@
     }
   ],
   "additionalClaim": "Industry-leading warranty.",
+  "msrp": {
+    "amount": 72000,
+    "formatted": "$72,000",
+    "label": "Starting MSRP",
+    "disclaimer": "Additional configurations available — call for details.",
+    "source": "Terraplex MAP policy. Confirmed by Jack Schroeder 2026-03-30.",
+    "usage": "Dealers may advertise MSRP only. See content/pricing-policy.md for full rules."
+  },
   "benefits": [
     "Reduce Input Losses",
     "Lower Operating Costs",
