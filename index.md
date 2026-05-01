@@ -86,7 +86,7 @@ Global content catalog for the Terraplex hub. Updated by every ingest. The lint 
 
 ## Synthesis (query → file-back outputs)
 
-(Empty. New cross-domain analyses filed by chat sessions land here as `synthesis/<slug>.md`.)
+- [synthesis/new-heights-meeting-2026-05-01.md](synthesis/new-heights-meeting-2026-05-01.md) — Distilled outputs from BGD ↔ New Heights Ag monthly check-in: 2 new platform-feature gaps surfaced (AI Marketing Materials Automation; Trade Show Support Packages), per-dealer direct-to-live trust, industry signals on fertilizer/marketing channels.
 
 ## Raw sources
 

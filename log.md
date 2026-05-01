@@ -8,6 +8,9 @@ Append-only chronological record of ingests, queries, and lints. Each entry star
 
 ---
 
+## [2026-05-01] synthesis | New Heights Ag monthly check-in 2026-05-01
+Distilled BGD ↔ Josh Quessenberry monthly meeting (28-min Gemini transcript, kept private at /reference/). Filed [synthesis/new-heights-meeting-2026-05-01.md](synthesis/new-heights-meeting-2026-05-01.md) as the anchor doc. Routed: 2 new platform-capability gaps to [feature-gaps.md](feature-gaps.md) (Dealer Portal AI Marketing Materials Automation; Trade Show Support Packages). Per-dealer direct-to-live trust + R-32 imagery + Pittsburgh trade show follow-ups to [sites/new-heights/NOTES.md](https://github.com/beardedgingerdesigns/new-heights/blob/main/NOTES.md). Industry signals (fertilizer prices, drone-market saturation in MO/AR/OK/KS, digital billboards as emerging dealer marketing channel) captured in synthesis only — observational, single-source; promote if recurring.
+
 ## [2026-05-01] manual-import | Reference materials from /reference into wiki
 
 Pulled curated content from the manager-app's gitignored `reference/` directory into the wiki:
