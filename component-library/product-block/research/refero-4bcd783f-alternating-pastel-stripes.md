@@ -2,7 +2,7 @@
 referoScreenId: 4bcd783f-a857-4d00-8cf4-071d1326f789
 referoUrl: https://refero.design/pages/4bcd783f-a857-4d00-8cf4-071d1326f789
 section: product-block
-applicableArchetypes: [clean, terrain, field]
+applicableArchetypes: [clean, terrain, field, patriot]
 incompatibleArchetypes: [forge, tactical]
 savedAt: 2026-05-01
 savedFor: library-audit
@@ -28,6 +28,7 @@ A repeatable two-column product-block pattern: each feature gets its own full-wi
 - CLEAN: native fit — use brand-tinted very-pale neutrals (e.g. #F4F1EC, #EFF2F0) instead of saturated pastels to keep the corporate-professional read.
 - TERRAIN: this IS the topographic alternating-bands pattern at section scale — alternate light cream and a deeper sage / clay tone instead of two pastels, and let the stripe transition itself act as the topographic line.
 - FIELD: swap pastels for muted earth tones (warm cream, soft amber, sage, dusty terracotta). Keep the two-column grid and pill CTA shape; replace SaaS screenshots with photographic crop or equipment imagery framed in the same rounded inset.
+- PATRIOT: stripes are already core to this archetype, so the ABABAB rhythm fits natively — but rotate three colors instead of two (cream → navy → cream → barn-red → cream → navy) to avoid reading as a literal flag. Keep the rounded mockup-card inset; thin star or diagonal-rule divider between stripes only if the rest of the page is restrained. The pill CTA stays a single neutral (charcoal) so the flag colors don't compete for emphasis.
 - FORGE / TACTICAL: the alternating-pastel-stripe move directly conflicts with dark dominant; if you want this rhythm in a dark archetype, rebuild as alternating black / charcoal stripes with a single accent-color rim — a different pattern, not this one.
 
 ## Source brief

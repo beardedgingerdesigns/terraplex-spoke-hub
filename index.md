@@ -63,7 +63,10 @@ Global content catalog for the Terraplex hub. Updated by every ingest. The lint 
 - [component-library/README.md](component-library/README.md) — component-library schema, namespaces, curation criteria
 - [component-library/hero/research/refero-ae84b62a-topographic-layered-bg.md](component-library/hero/research/refero-ae84b62a-topographic-layered-bg.md) — topographic-contour hero backdrop pattern (TERRAIN/FORGE/TACTICAL)
 - [component-library/hero/research/refero-f619e700-centered-screenshot-trio.md](component-library/hero/research/refero-f619e700-centered-screenshot-trio.md) — centered light-hero with screenshot trio + benefit row (FIELD/CLEAN/TERRAIN)
-- [component-library/product-block/research/refero-4bcd783f-alternating-pastel-stripes.md](component-library/product-block/research/refero-4bcd783f-alternating-pastel-stripes.md) — alternating full-bleed pastel stripes with ABABAB rhythm (CLEAN/TERRAIN/FIELD)
+- [component-library/product-block/research/refero-4bcd783f-alternating-pastel-stripes.md](component-library/product-block/research/refero-4bcd783f-alternating-pastel-stripes.md) — alternating full-bleed pastel stripes with ABABAB rhythm (CLEAN/TERRAIN/FIELD/PATRIOT)
+- [component-library/services/research/refero-15fcbffc-three-tier-inverted-middle.md](component-library/services/research/refero-15fcbffc-three-tier-inverted-middle.md) — three-card service-tier grid where the middle tier inverts color to carry hierarchy without size or accent chrome (CLEAN/TERRAIN/FIELD/FORGE/TACTICAL)
+- [component-library/contact/research/refero-376ca585-two-card-decision-pivot.md](component-library/contact/research/refero-376ca585-two-card-decision-pivot.md) — two-card decision pivot (sales vs support) above a multi-column offices grid (all archetypes)
+- [component-library/contact/research/refero-23938dfd-form-with-topic-checkboxes.md](component-library/contact/research/refero-23938dfd-form-with-topic-checkboxes.md) — form-led contact with non-interactive topic-checkbox preview + regional phone-number band (CLEAN/FIELD/TERRAIN/FORGE/TACTICAL)
 
 ## Industry research
 
