@@ -76,7 +76,12 @@
       "vibes": [
         "Farm-focused/Down-to-earth"
       ],
-      "takenBy": []
+      "takenBy": [
+        {
+          "dealer": "prairie-aerial",
+          "accent": "#92400E"
+        }
+      ]
     },
     {
       "id": "patriot",
@@ -90,6 +95,10 @@
         {
           "dealer": "trussservicesllc-com-com",
           "accent": "#C8102E"
+        },
+        {
+          "dealer": "longhorn-aerial",
+          "accent": "#B91D1D"
         }
       ]
     }
