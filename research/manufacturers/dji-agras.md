@@ -3,6 +3,9 @@ title: "DJI Agras"
 category: manufacturers
 publishedAt: 2026-05-01
 sources:
+  - url: https://ag.dji.com
+    accessedAt: 2026-05-01
+    localCopy: raw/manual-import/competitors/dji-agriculture/2026-05-01-homepage.md
   - url: https://www.suasnews.com/2024/04/dji-agras-t50-and-t25-expand-aerial-crop-protection-capabilities/
     accessedAt: 2026-05-01
   - url: https://www.agweb.com/news/business/technology/dji-launches-new-ag-spray-drones
@@ -34,3 +37,13 @@ DJI Agras remains the dominant ag spray drone supplier in the US by installed ba
 - DJI's stated 2026 US revenue exposure: ~$1.5B total — $700M tied to 14 already-authorized DJI products (5 UAS, 9 non-UAS) for which the FCC set aside authorizations, plus $860M tied to 25 new UAS and non-UAS models DJI had planned to launch in 2026 [source: https://agfundernews.com/dji-fcc-action-could-wipe-out-1-5bn-in-us-drone-sales-in-2026-with-staggering-real-world-consequences].
 - Legal status: DJI filed appeal at Ninth Circuit Court of Appeals on February 20, 2026 (Case 26-1029), arguing the FCC ruling is "procedurally and substantively flawed," that the agency exceeded its statutory authority, failed required procedures, never identified an actual national-security threat from DJI products, and violated the Fifth Amendment [source: https://agfundernews.com/dji-fcc-action-could-wipe-out-1-5bn-in-us-drone-sales-in-2026-with-staggering-real-world-consequences] [source: https://www.suasnews.com/2026/02/dji-mounts-legal-challenge-against-us-regulator-over-arbitrary-security-ban/].
 - Key dealer-facing nuance: existing DJI ag models that were authorized before the December 22, 2025 ruling can still be legally bought and deployed in the US under the current FCC framework; the constraint is on new SKUs and re-authorizations, not on operation of already-authorized airframes [source: https://agfundernews.com/made-in-america-fcc-decision-sparks-scramble-to-localize-ag-spray-drone-production].
+
+### Revision 2026-05-01b (manual-import augment)
+
+Augmenting from a snapshot of [DJI's official ag site homepage](raw/manual-import/competitors/dji-agriculture/2026-05-01-homepage.md) accessed 2026-05-01:
+
+- **Additional 2026 SKUs in the announced lineup**: T100, T70P, and T25P are positioned as new platforms launched globally in late-2025/early-2026. These are part of the $860M new-SKU exposure under the FCC ruling — the most directly affected products [source: https://ag.dji.com].
+- **Global scale claim**: "Over 300,000 drones operate globally, treating more than 500 million hectares of farmland around the world" [source: https://ag.dji.com]. Useful as a comparison anchor when a customer asks about deployed installed base — DJI's number dwarfs every US-built competitor combined.
+- **Employment claim**: DJI states their agricultural project has "generated over 30,000 new jobs" [source: https://ag.dji.com]. Take with appropriate skepticism (the global figure includes Chinese operations); useful when DJI's "we're committed to American agriculture" rhetoric comes up — most of those 30K jobs are not in the US.
+- **Service plans**: DJI Care + DJI Care Refresh are the OEM's service tiers [source: https://ag.dji.com]. Note the contrast: this is OEM-level service, not the same as a US dealer's local in-person support that Terraplex emphasizes (see [../../content/positioning.md](../../content/positioning.md) point 2 — "the dealer IS the competitive advantage").
+- **Crop categories**: DJI splits product positioning between **Grain Crops** (rice / wheat / corn) and **Commercial Crops** (cotton / citrus / apple / tea). Useful context — the citrus / orchard positioning is a category Terraplex's lineup does not yet emphasize.

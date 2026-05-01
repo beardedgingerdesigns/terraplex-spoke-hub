@@ -64,6 +64,17 @@ The `localCopy` path is relative to the hub root. If the snapshot file goes miss
 
 ---
 
+## Two namespaces
+
+This directory has **two parallel namespaces** with different rules:
+
+| Path | Source | When to use |
+|---|---|---|
+| `raw/<domain>/<date>-<slug>.md` | Routine-fetched (digest, intelligence, deep-dive) | Routines populate this automatically |
+| `raw/manual-import/<...>` | Human-curated reference materials | One-shot imports from local sources, archives, sell sheets — see [`raw/manual-import/README.md`](manual-import/README.md) |
+
+Both namespaces share the same immutability rule and cite-via-`localCopy` mechanic. The split is about *who created the snapshot*, not how it's used.
+
 ## Routine integration
 
 Every `WebFetch` call in the digest, intelligence, and deep-dive routines must:

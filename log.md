@@ -8,6 +8,22 @@ Append-only chronological record of ingests, queries, and lints. Each entry star
 
 ---
 
+## [2026-05-01] manual-import | Reference materials from /reference into wiki
+
+Pulled curated content from the manager-app's gitignored `reference/` directory into the wiki:
+
+- **New**: [research/manufacturers/terraplex.md](research/manufacturers/terraplex.md) — full Terraplex Ag parent brand profile (the exclusive GTEEX Revolution distributor, 49-location dealer network, Sam Welton compliance program). The parent brand had no profile before; this fills the gap.
+- **New**: [content/compliance-program.md](content/compliance-program.md) — Sam Welton bio, Part 137 / 107 services, $449 prep course details. Hub-canonical compliance content for dealer sites to reference.
+- **New**: [research/dealer-economics/competitor-distributors.md](research/dealer-economics/competitor-distributors.md) — structural profiles of Agri Spray Drones, Bestway Ag, and Rantizo as direct comparison anchors for dealer chat sessions.
+- **Augmented**: [products/r-32.md](products/r-32.md) and [products/i-19.md](products/i-19.md) added headline-spec tables, the canonical 5-benefit frame ("Reduce Input Losses / Lower Operating Costs / Tough or Unmatched Terrain Access / Multi-role Functionality / Sustainable Operations"), and the customer FAQ from terraplexag.com/drones.
+- **Augmented**: [content/positioning.md](content/positioning.md) added the canonical brand-language section ("Built in the Americas, for the American Farmer", "Farmer-owned agricultural drone reseller", "We use the drones we sell", etc.) plus the brand-structure clarification (Terraplex = distributor, GTEEX = OEM).
+- **Augmented**: [research/manufacturers/dji-agras.md](research/manufacturers/dji-agras.md) added Revision 2026-05-01b with full T-series lineup including new T100/T70P/T25P, 300K global drones / 500M hectares scale claim, 30K jobs claim, DJI Care service tiers, grain/commercial crop split.
+- **New `raw/manual-import/` namespace** holds 13 source snapshots: 4 competitor homepages + 7 terraplex-corporate sub-pages + 2 sell-sheet PDFs converted to markdown. New [raw/manual-import/README.md](raw/manual-import/README.md) documents the namespace's rules.
+
+Skipped per editorial decision:
+- 7 meeting transcripts (Black Knight, New Heights, Great River, Truss-ag, Terraplex monthly check-ins, Revolution Drone kickoff, Terraplex review) — sensitive content, not library-worthy as raw transcripts.
+- 3 onboarding questionnaires (Truss Services filled, Wiemer Ag Service partial, New Heights blank template) — duplicate of `spoke/` schema; Wiemer is a planned future onboarding (skip until live).
+
 ## [2026-05-01] migration | Adopted LLM Wiki pattern at hub level
 
 Added `index.md`, `log.md`, `synthesis/`, `raw/` namespaces. Augmented [HUB-CLAUDE.md](HUB-CLAUDE.md) with wiki-operations section. Created `Hub lint — weekly` routine. Updated existing routine prompts (digest, intelligence, deep-dive, curator) to write index/log entries on every ingest. See [docs/llm-wiki.md](https://github.com/beardedgingerdesigns/terraplex-site-builder/blob/main/docs/llm-wiki.md) for the pattern source.

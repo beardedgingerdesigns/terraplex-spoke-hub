@@ -97,8 +97,12 @@ Each file is authoritative for a specific domain. When the same topic appears in
 | `feature-gaps.md` | Platform capability gaps and Terraplex editorial restrictions |
 | `index.md` | Global content catalog (every wiki page with one-line description) |
 | `log.md` | Append-only chronological record of ingests / queries / lints |
-| `raw/<domain>/<date>-<slug>.md` | Snapshots of cited URLs (immutable; see `raw/README.md`) |
+| `raw/<domain>/<date>-<slug>.md` | Snapshots of cited URLs from routine fetches (immutable; see `raw/README.md`) |
+| `raw/manual-import/<...>` | Human-curated reference materials (immutable; see `raw/manual-import/README.md`) |
 | `synthesis/<slug>.md` | Cross-domain analyses filed back from chat sessions or manual investigation |
+| `content/compliance-program.md` | Terraplex compliance program (Sam Welton, Part 137 / Part 107 services, prep course) |
+| `research/manufacturers/terraplex.md` | Terraplex Ag parent brand profile (exclusive GTEEX Revolution distributor, 49-location dealer network) |
+| `research/dealer-economics/competitor-distributors.md` | Comparative profiles of Agri Spray Drones, Bestway Ag, Rantizo |
 
 ## When referencing an asset
 

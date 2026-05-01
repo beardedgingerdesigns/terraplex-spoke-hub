@@ -22,6 +22,7 @@ Global content catalog for the Terraplex hub. Updated by every ingest. The lint 
 - [content/content-exclusions.md](content/content-exclusions.md) — what must never appear on a dealer site
 - [content/service-patterns.md](content/service-patterns.md) — reusable service structures (Sam Welton contact, service tiers, Part 107 prep)
 - [content/pricing-policy.md](content/pricing-policy.md) — MAP policy, MSRP-only rule, kit-tier exposure rule
+- [content/compliance-program.md](content/compliance-program.md) — Terraplex compliance program: Sam Welton, Part 137 services, Part 107 prep course
 
 ## Products
 
@@ -67,8 +68,12 @@ Global content catalog for the Terraplex hub. Updated by every ingest. The lint 
 ## Industry research
 
 ### Manufacturer profiles
-- [research/manufacturers/dji-agras.md](research/manufacturers/dji-agras.md) — DJI Agras profile: T50/T25/T30/T20/T10 lineup, FCC ruling, $1.5B exposure (last refreshed 2026-05-01)
+- [research/manufacturers/terraplex.md](research/manufacturers/terraplex.md) — Terraplex Ag profile: parent brand, exclusive GTEEX Revolution distributor, 49-location dealer network, in-house compliance via Sam Welton (created 2026-05-01)
+- [research/manufacturers/dji-agras.md](research/manufacturers/dji-agras.md) — DJI Agras profile: T-series lineup (T100/T70P/T50/T25/T30/T20/T10), FCC ruling, $1.5B exposure (last refreshed 2026-05-01)
 - [research/manufacturers/hylio.md](research/manufacturers/hylio.md) — Hylio profile: AG-230/HYL-150 ARES, swarm throughput, $2M raise, Texas plant (last refreshed 2026-05-01)
+
+### Dealer economics
+- [research/dealer-economics/competitor-distributors.md](research/dealer-economics/competitor-distributors.md) — Agri Spray Drones, Bestway Ag, Rantizo: structural comparison vs Terraplex's distributor model
 
 ### Regulatory
 - [research/regulatory/2026-04-update.md](research/regulatory/2026-04-update.md) — April 2026 regulatory roundup: USDA NPG-Ag launch, FAA Part 108 status, DJI appeal
@@ -85,4 +90,9 @@ Global content catalog for the Terraplex hub. Updated by every ingest. The lint 
 
 ## Raw sources
 
-(See [raw/README.md](raw/README.md). Snapshots of cited URLs preserved against link rot.)
+Two namespaces, different rules. See [raw/README.md](raw/README.md) for routine-fetched snapshots and [raw/manual-import/README.md](raw/manual-import/README.md) for human-curated reference materials.
+
+**Currently in `raw/manual-import/`** (cited by wiki entries):
+- competitors/agri-spray-drones, bestway-drones, dji-agriculture, rantizo (1 homepage snapshot each)
+- competitors/terraplex-corporate (7 page snapshots: homepage, drones, find-a-dealer, terraplex-difference, compliance, test-prep, contact)
+- gteex-terraplex (R-32 + I-19 sell-sheet PDFs converted to markdown)
