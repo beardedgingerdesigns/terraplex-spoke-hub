@@ -12,6 +12,46 @@ Claude Code session guidance for editing this hub repo. Read this before changin
 - Add anything surprising, anything you had to decide without clear guidance, or anything a future session would need to know.
 - Keep it terse — bullet points, not prose.
 
+## Wiki operations
+
+This hub is an LLM-maintained wiki. Three operations govern how content moves in and out. Read [`index.md`](index.md) for the global content catalog and [`log.md`](log.md) for the chronological record. The pattern is described in [docs/llm-wiki.md](https://github.com/beardedgingerdesigns/terraplex-site-builder/blob/main/docs/llm-wiki.md) (in the manager-app repo).
+
+### Ingest
+
+Adding new content — a research note, an archetype edit, a product update, a deep-dive analysis, a manual addition. Every ingest must:
+
+1. **Write/update the content file(s)** per the file-authority map below
+2. **Update [`index.md`](index.md)** with the new page (or revised one-line description)
+3. **Append an entry to [`log.md`](log.md)** with date, operation type, and a one-line summary. Format: `## [YYYY-MM-DD] <operation> | <title>` followed by 1–3 sentences of context.
+4. **Add at least one cross-reference where natural** — link to related archetypes, products, research, etc. via markdown links `[label](path)`. Wikilinks `[[label]]` are NOT used here (they don't render on GitHub).
+5. **For sources cited via WebFetch/WebSearch:** save a snapshot to [`raw/<domain>/<YYYY-MM-DD>-<slug>.md`](raw/README.md) and reference it via `localCopy:` in the wiki entry's `sources:` frontmatter
+
+### Query
+
+Using the wiki to answer a question — typically during a dealer chat session, a design-foundation run, or a manual investigation. Read [`index.md`](index.md) first to find relevant pages, then drill into them.
+
+When a synthesis is library-worthy (cross-domain, would inform multiple future sessions, not redundant with existing content), file it under [`synthesis/`](synthesis/) as a new page following the same ingest rules above. Examples of library-worthy syntheses: competitive positioning analyses, archetype-product matchup recommendations, decision frameworks that span multiple wiki domains. Most queries don't produce a library-worthy artifact — that's fine; only file when it's clearly valuable.
+
+### Lint
+
+Periodic health-check (weekly, via the `Hub lint — weekly` routine). Looks for:
+
+- **Orphans**: pages no other page links to
+- **Index gaps**: pages on disk but not in [`index.md`](index.md), or in [`index.md`](index.md) but missing on disk
+- **Stale claims**: pages with `publishedAt` frontmatter older than 90 days in `research/`, or facts newer digests have superseded
+- **Contradictions**: pages claiming conflicting facts (especially across `products/`, `research/manufacturers/`, and `content/positioning.md`)
+- **Missing cross-references**: pages that should link based on content overlap but don't
+- **Suggested investigations**: knowledge gaps surfaced by reading across the hub
+- **`raw/` orphans and broken `localCopy` links**
+
+Output is a PR. Auto-applied: index gaps, ≤10 cross-reference additions per run. Flagged for human review only: contradictions, stale claims, suggested investigations, orphan removals.
+
+### `NOTES.md` vs `log.md`
+
+Different jobs:
+- **[`NOTES.md`](NOTES.md)** — working memory: open questions, follow-ups, current decisions context. Edited freely; reorganized as needed.
+- **[`log.md`](log.md)** — append-only timeline of operations. Never reorganized; never edited retroactively. Re-classifying a past entry = appending a new one that references it.
+
 ## Architectural ground rules
 
 These are inviolable. If a requested change would break one of these, stop and raise it rather than silently working around it.
@@ -55,6 +95,10 @@ Each file is authoritative for a specific domain. When the same topic appears in
 | `spoke/questionnaire.json` | Onboarding field definitions and allowed values |
 | `spoke/example.spoke.config.json` | Reference spoke config (shape demonstration only) |
 | `feature-gaps.md` | Platform capability gaps and Terraplex editorial restrictions |
+| `index.md` | Global content catalog (every wiki page with one-line description) |
+| `log.md` | Append-only chronological record of ingests / queries / lints |
+| `raw/<domain>/<date>-<slug>.md` | Snapshots of cited URLs (immutable; see `raw/README.md`) |
+| `synthesis/<slug>.md` | Cross-domain analyses filed back from chat sessions or manual investigation |
 
 ## When referencing an asset
 
