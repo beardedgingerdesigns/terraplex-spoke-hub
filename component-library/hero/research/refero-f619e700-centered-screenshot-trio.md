@@ -2,7 +2,7 @@
 referoScreenId: f619e700-0cbe-408d-9cd9-9e55bf78b686
 referoUrl: https://refero.design/pages/f619e700-0cbe-408d-9cd9-9e55bf78b686
 section: hero
-applicableArchetypes: [field, clean, terrain]
+applicableArchetypes: [field, clean, terrain, patriot]
 incompatibleArchetypes: [forge, tactical]
 savedAt: 2026-05-01
 savedFor: library-audit
@@ -28,6 +28,7 @@ A clean, centered light-hero pattern that pairs a single bold headline with a ho
 - FIELD: keep the structure as-is, swap the green accent for warm cream/amber, and use earth-tone-tinted screenshots (drone overhead photo, app mockup, satellite map) so the trio reads as agricultural product context.
 - CLEAN: native fit — keep neutral grey + a single brand accent for the benefit labels.
 - TERRAIN: works if the alternating light/dark rhythm starts in the section AFTER the hero; the hero itself should stay light to set the "light band" baseline.
+- PATRIOT: cream (or off-white) background instead of pure white. Headline in deep navy, single navy pill CTA. The four numeric-prefixed benefit labels become PATRIOT's restrained accent slot — alternate two flag-derived accents on the prefixes only ("01" navy, "02" barn-red, "03" navy, "04" barn-red) while the labels themselves stay neutral charcoal. The screenshot trio is photographic/equipment imagery, not SaaS UI. Do NOT add literal flag stripes, stars, or diagonal rules around the trio — the restraint of the centered light hero is what keeps PATRIOT from reading as kitsch. See [PATRIOT archetype](../../../archetypes/patriot.md) for the broader chrome rules. For a PATRIOT-native hero with more declared ideology, see [refero-b86571f2-manifesto-creed-hero.md](./refero-b86571f2-manifesto-creed-hero.md).
 
 ## Source brief
 OneSoil — a precision-agriculture SaaS landing page. The dealer brief was platform credibility for farmers and agronomists; the centered light hero plus screenshot trio handles "show me the product" without a stock farm photo.
