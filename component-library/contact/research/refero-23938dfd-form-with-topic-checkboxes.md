@@ -2,8 +2,7 @@
 referoScreenId: 23938dfd-dfdd-47db-bb7f-73e7588456a4
 referoUrl: https://refero.design/pages/23938dfd-dfdd-47db-bb7f-73e7588456a4
 section: contact
-applicableArchetypes: [clean, field, terrain, forge, tactical]
-incompatibleArchetypes: [patriot]
+applicableArchetypes: [clean, field, terrain, forge, tactical, patriot]
 savedAt: 2026-05-01
 savedFor: library-audit
 tags: [form-led, topic-checkboxes, regional-numbers, prop-photo, two-column]
@@ -23,7 +22,7 @@ A form-led contact pattern where the LEFT column previews "what you'll get out o
 - Don't use both this AND the [two-card decision pivot](./refero-376ca585-two-card-decision-pivot.md) on the same contact page — pick one. They both occupy the "above the form" slot and compete for first attention.
 - The watercolor abstract shape behind the portrait is a brand-illustrative move; if the archetype doesn't already have an illustrative system (FORGE blobs, FIELD organic shapes), drop the shape and let the photo stand on a flat background.
 - Don't make the topic checkboxes interactive — the moment they become real form inputs, the section becomes a survey and the form below becomes redundant. The whole point is the preview is informational.
-- PATRIOT's flag-stripe and star motifs collide with the soft watercolor + portrait composition. If PATRIOT needs a form-led contact, use this structural skeleton (left column copy + checkboxes, right column form, regional band below) but drop the abstract shape and the lifestyle portrait.
+- The watercolor-shape-behind-portrait composition is the only PATRIOT-incompatible piece — flag-stripe / star motifs would compete with a soft abstract backdrop. Drop the abstract shape (see PATRIOT note in adaptations); the rest of the structure is archetype-neutral.
 
 ## Adaptation notes (cross-archetype)
 - CLEAN: native fit. Use brand-tinted greys, single accent on the submit button, plain-white form fields.
@@ -31,6 +30,7 @@ A form-led contact pattern where the LEFT column previews "what you'll get out o
 - TERRAIN: works as a light-band moment between two darker bands. Regional phone grid below is a natural place for a topographic divider line above the heading.
 - FORGE: invert to a dark form (charcoal background, light input fields), keep the photo but warm the lighting toward ember tones. Replace watercolor shape with a soft glow blob behind the portrait.
 - TACTICAL: drop the photo and the abstract shape entirely — TACTICAL's restraint reads cleaner with a precision-sans heading + topic checkboxes only. Form fields get visible thin borders, not soft insets.
+- PATRIOT: keep the structural skeleton (left column heading + topic checkboxes + portrait, right column form, regional phone band below) but swap the watercolor shape for either a flat cream background OR a thin navy-and-barn-red rule above the heading. Portrait is a real farmer or dealer principal in late-afternoon light, no stylized backdrop. Topic-checkbox squares fill in deep navy; submit button is a navy pill with cream label. The regional phone band below stays flat-typography with state names as headings instead of regions ("North Dakota / Minnesota / Iowa" type grouping). See [PATRIOT archetype](../../../archetypes/patriot.md) for the broader chrome-restraint rules — the topic-checkbox preview is the conversion move; flag motifs should not pull focus from it.
 
 ## Source brief
 Wrike's "Contact Sales" page — a B2B SaaS lead-capture pattern. Surfaces because the topic-checkbox preview is a conversion-design move (frames the form as conversation-prep, not data-extraction) that translates directly to a dealer demo-request flow: "Discuss equipment financing", "Plan a Part 137 compliance review", "Schedule a field demo".
