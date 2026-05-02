@@ -2,8 +2,7 @@
 referoScreenId: 15fcbffc-bf73-4741-be85-e6e9635f179a
 referoUrl: https://refero.design/pages/15fcbffc-bf73-4741-be85-e6e9635f179a
 section: services
-applicableArchetypes: [clean, terrain, field, forge, tactical]
-incompatibleArchetypes: [patriot]
+applicableArchetypes: [clean, terrain, field, forge, tactical, patriot]
 savedAt: 2026-05-01
 savedFor: library-audit
 tags: [tier-cards, pricing-grid, inverted-middle, comparison-table, monochrome]
@@ -22,7 +21,7 @@ A three-card service-tier grid where the recommended middle card inverts color f
 ## What NOT to take
 - Don't enlarge the middle card or push it up out of the row — the inversion is the emphasis. Scaling adds noise without adding clarity.
 - Don't import the bright-blue "POPULAR" pill literally — pick a single accent that fits the archetype (ember orange in FORGE, brand-navy in CLEAN). It's the smallest piece of chrome on the page; it shouldn't fight the inversion.
-- The flag-color "stripes-and-stars" motif of PATRIOT clashes with monochrome-inversion logic. If a PATRIOT dealer needs tier cards, use color-coded tier accents (red/white/blue rim per card) rather than this inversion pattern.
+- For PATRIOT, do NOT color-code the three cards (red rim / white rim / blue rim) — that turns the row into a literal flag and collapses the inversion logic. The right PATRIOT move is to use the cream→navy contrast as the inversion mechanism (see adaptation note below); flag colors stay at micro-chrome scale only.
 - Don't leave the comparison table off if you have more than ~5 features per tier — the cards alone will run too long. Either trim the in-card lists or commit to the table.
 
 ## Adaptation notes (cross-archetype)
@@ -31,6 +30,7 @@ A three-card service-tier grid where the recommended middle card inverts color f
 - TERRAIN: alternate this with the [alternating-stripes pattern](../../product-block/research/refero-4bcd783f-alternating-pastel-stripes.md) elsewhere on the page — the inverted middle card here echoes the dark-band rhythm of the section below.
 - FORGE: dark-dark-darker, with the middle going to near-black and flanking cards a half-shade lighter. Single ember-orange CTA on the middle card. Skip the FAQ accordion — adds copy without adding gravitas.
 - TACTICAL: use the inversion logic but tighten geometry — sharper corner radius (~6px instead of 16px), monochrome black/white only, precision-sans on prices. Add corner brackets on the middle card if the rest of the page uses them.
+- PATRIOT: cream-cream-navy. Two cream cards flank a deep-navy middle card with cream type — the inversion happens between PATRIOT's two natural neutrals, not between black and white. The "POPULAR" pill on the middle card is the single barn-red moment on the page (the third flag color enters once, at micro-scale). Card chrome stays restrained: same 16px corner radius across all three, same pill CTA shape, same checkmark feature treatment. Do NOT color-code the three cards or add stars/diagonal stripes — the discipline of using only the cream→navy contrast is what keeps the pattern from reading as kitsch. Pairs with the [manifesto-creed hero](../../hero/research/refero-b86571f2-manifesto-creed-hero.md) and the [kicker-band services pattern](./refero-02ae136e-kicker-band-services.md) for a full PATRIOT page rhythm. See [PATRIOT archetype](../../../archetypes/patriot.md).
 
 ## Source brief
 Endless — a SaaS subscription page (Free / Pro / Team). Surfaces because the structural pattern (three-card tier grid + inverted middle + comparison table + FAQ) is reusable for dealer service tiers (basic operator / standard fleet / full-managed compliance) without dragging the SaaS aesthetic along for the ride.
