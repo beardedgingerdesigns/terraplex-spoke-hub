@@ -1,0 +1,40 @@
+---
+referoScreenId: 4c2ed506-3f32-4dd7-bc1b-2973e3614339
+referoUrl: https://refero.design/pages/4c2ed506-3f32-4dd7-bc1b-2973e3614339
+section: product-block
+applicableArchetypes: [field, terrain, clean, patriot]
+incompatibleArchetypes: [forge, tactical]
+savedAt: 2026-05-02
+savedFor: library-audit
+tags: [aerial-photo-backdrop, continuous-photo-spine, floating-feature-cards, agricultural-photography, mockup-card-overlay]
+---
+
+## Why this is library-worthy
+A product-block pattern where the entire feature sequence sits on top of a single continuous full-bleed aerial photograph (farmland from above) that runs unbroken from the first feature to the last — the photo IS the page background, not a section break. Each feature is a small floating card (UI mockup or stat-block) anchored to one side of the page, with the heading + paragraph on the opposite side. The aerial imagery does the visual unification work that alternating colored stripes do in [refero-4bcd783f-alternating-pastel-stripes](./refero-4bcd783f-alternating-pastel-stripes.md), without the rhythm-based pacing.
+
+## What to take
+- The page spine is one continuous full-bleed aerial photograph — top-down or oblique drone footage of farmland (variegated crop fields, tractor/combine tracks, irrigation circles). The photo is desaturated ~10–15% and overlaid with a soft cream / off-white wash (~70% opacity) so it reads as a tinted backdrop rather than a foreground image. No section breaks, no neutral spacers — the photo runs the full vertical length of the product-block sequence.
+- Each feature is a small floating card pinned to the LEFT or RIGHT edge of the centered content column, alternating sides every feature. Cards are white or near-white (~#FAFAFA), rounded ~12–16px corners, soft drop-shadow (~8–12px blur, ~10% opacity), no outline. Each card holds a single product UI mockup or a labeled chart/stat — small, ~280–320px wide.
+- Opposite each card sits the feature text: a small uppercase kicker label (~12px), a short heading (~24–28px sentence-case), and a 1–2 line paragraph. The text is on the open side of the page (no card chrome), reading directly against the aerial photo's tinted wash.
+- 5–7 features stack vertically with consistent ~80–120px vertical rhythm between them. The alternation of card-on-left / card-on-right sells the page as a single sustained scroll without monotony.
+- Above the feature spine, a short hero band introduces the product (centered headline + 2-line subhead + single CTA pill). Below the spine, a full-bleed dark band ("Watch the demo to learn what [product] can do") provides the closing CTA — the dark band is the only break in the photo backdrop and earns its weight by being the conversion moment.
+- Close the page with a country / region grid (3-column tiles of customer locations, each tile a small farmland photo with country name) — a credibility band that reuses the aerial-photography vocabulary at thumbnail scale.
+
+## What NOT to take
+- Don't break the aerial photo into sections or alternate it with colored stripes — the affordance is the SINGLE continuous photo. Breaking it up collapses into either the [alternating-pastel-stripes pattern](./refero-4bcd783f-alternating-pastel-stripes.md) or a generic photo-on-the-side feature list.
+- Don't import the source's literal pastel-mauve / lavender data-viz colors inside the mockup cards — those are OneSoil's brand. The transferable move is "small floating UI/stat card on a continuous photo backdrop," not the specific color story inside the card.
+- Don't use the pattern with stock farmland photography. The aerial photo must be specific enough to be defensible (this dealer's territory, real fields, real crop variety) — generic stock fields collapse the credibility-by-specificity move that the pattern depends on.
+- Don't add a CTA to every feature card. The pattern has ONE CTA (the dark band at the bottom). Per-feature CTAs fight the unified-spine read.
+- The desaturated-cream-wash aerial photo conflicts directly with FORGE's full-black requirement and TACTICAL's pure-black-and-precision-geometry register. For dark archetypes use the [dark feature bands product-block](./refero-eb12db31-dark-feature-bands.md) instead.
+
+## Adaptation notes (cross-archetype)
+- FIELD: native fit. The aerial-farmland-with-cream-wash backdrop IS [FIELD's archetype palette](../../../archetypes/field.md). Floating cards are warm-cream (~#F8F2E8) with amber accents on the kicker labels and chart highlights. Country / region grid at the bottom uses warm-cream-on-warm-cream tiles. Cards hold drone-ops mockups (mission-plan UI, spray-pattern chart, weather overlay) rather than SaaS UI.
+- TERRAIN: works as a sustained "light band" that anchors the page's alternating rhythm. Pair the aerial-photo spine with one mid-sequence dark insert (a single dark feature band with topographic motif) before returning to the photo backdrop — the mid-page dark band is the topographic anchor; everything before and after stays on the photo. Floating cards use the [TERRAIN archetype's](../../../archetypes/terrain.md) clay/sage accents on chart highlights only. Sibling: [topographic layered-bg](../../hero/research/refero-ae84b62a-topographic-layered-bg.md) for the matching dark hero.
+- CLEAN: cool the aerial photo's wash (gray-50 instead of cream) and tighten the cards (white, no warmth, single brand accent on chart highlights). The product-mockup cards become the page's primary visual register; the photo recedes to a tinted neutral. See [CLEAN archetype](../../../archetypes/clean.md).
+- PATRIOT: warm cream wash over the aerial (later-afternoon American farmland, golden-hour shadows are a feature, not a flaw). Floating cards stay cream-on-cream with deep-navy headings and a single barn-red micro-accent on one stat per card (e.g. the percentage callout color). Do NOT add flag-stripe rules between features or stars on the cards — the aerial photograph's "American land from above" register IS the patriotic move; chrome flags would compete. Pairs naturally with the [manifesto-creed hero](../../hero/research/refero-b86571f2-manifesto-creed-hero.md) (warm-lit creed photograph) for a coherent PATRIOT page rhythm — the manifesto sets the ideology in the hero, the aerial-photo spine sustains it through the product story without restating it. See [PATRIOT archetype](../../../archetypes/patriot.md).
+- FORGE / TACTICAL: skip — the desaturated-cream-photo treatment is light-dominant. See the [dark feature bands product-block](./refero-eb12db31-dark-feature-bands.md) for the dark-archetype counterpart.
+
+## Source brief
+OneSoil Yield's [/yield](https://yield.onesoil.ai/) product page — a precision-agriculture variable-rate-application tool for farmers. The library-worthy move is the structural cadence (continuous aerial-photo spine → alternating floating mockup cards → single dark-band CTA → country-grid credibility close), reusable for a Terraplex dealer telling a multi-feature [R-32](../../../products/r-32.md) or [I-19](../../../products/i-19.md) capability story (mission planning, spray patterns, mapping, fleet logging, compliance reporting) on a [FIELD](../../../archetypes/field.md), [TERRAIN](../../../archetypes/terrain.md), [CLEAN](../../../archetypes/clean.md), or [PATRIOT](../../../archetypes/patriot.md) site without dragging OneSoil's specific UI screenshots along for the ride.
+
+Sibling notes: [alternating-pastel-stripes](./refero-4bcd783f-alternating-pastel-stripes.md) for the colored-stripe alternative when no defensible aerial photography is available; [dark feature bands](./refero-eb12db31-dark-feature-bands.md) for the dark-archetype counterpart. Hero pairings: [manifesto-creed hero](../../hero/research/refero-b86571f2-manifesto-creed-hero.md) for PATRIOT/FIELD; [centered-screenshot-trio](../../hero/research/refero-f619e700-centered-screenshot-trio.md) for CLEAN. Related: [content/positioning.md](../../../content/positioning.md) for the canonical "Built in the Americas, for the American Farmer" language that pairs with this pattern's aerial-American-farmland register.
