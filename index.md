@@ -79,6 +79,7 @@ Global content catalog for the Terraplex hub. Updated by every ingest. The lint 
 - [component-library/services/research/refero-2fdf9ace-photo-mosaic-services.md](component-library/services/research/refero-2fdf9ace-photo-mosaic-services.md) — irregular photo-mosaic services overview paired with right-side capability list (FIELD/CLEAN/TERRAIN/PATRIOT)
 - [component-library/contact/research/refero-376ca585-two-card-decision-pivot.md](component-library/contact/research/refero-376ca585-two-card-decision-pivot.md) — two-card decision pivot (sales vs support) above a multi-column offices grid (all archetypes)
 - [component-library/contact/research/refero-23938dfd-form-with-topic-checkboxes.md](component-library/contact/research/refero-23938dfd-form-with-topic-checkboxes.md) — form-led contact with non-interactive topic-checkbox preview + regional phone-number band (all archetypes; PATRIOT requires dropping the watercolor backdrop)
+- [component-library/contact/research/refero-71707203-dealer-locator-map.md](component-library/contact/research/refero-71707203-dealer-locator-map.md) — full-bleed interactive map + floating filter-chip column for multi-location dealer networks (all archetypes; right pick when the network's breadth is the credibility move, ~10+ locations)
 
 ## Industry research
 
