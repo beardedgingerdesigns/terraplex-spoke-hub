@@ -1,6 +1,6 @@
 # Typography
 
-> These are Terraplex's visual defaults, not a platform-wide rule. The `field` archetype explicitly overrides this and permits a display serif for headlines.
+> These are Terraplex's visual defaults, not a platform-wide rule. The [`field`](../archetypes/field.md) archetype explicitly overrides this and permits a display serif for headlines.
 
 Use the system font stack by default. Do not import Google Fonts unless specifically requested.
 
