@@ -4,7 +4,7 @@
 
 ## The numbers (authoritative)
 
-MSRP values are canonical in `products/r-32.json` and `products/i-19.json` under the `msrp` field. Do not duplicate them elsewhere in hub content; dealer sites should read them from those files.
+MSRP values are canonical in [`products/r-32.json`](../products/r-32.json) and [`products/i-19.json`](../products/i-19.json) under the `msrp` field. Do not duplicate them elsewhere in hub content; dealer sites should read them from those files.
 
 | Product | Starting MSRP |
 |---|---|

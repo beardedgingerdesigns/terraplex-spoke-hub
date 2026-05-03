@@ -113,6 +113,10 @@ Global content catalog for the Terraplex hub. Updated by every ingest. The lint 
 
 - [synthesis/new-heights-meeting-2026-05-01.md](synthesis/new-heights-meeting-2026-05-01.md) — Distilled outputs from BGD ↔ New Heights Ag monthly check-in: 2 new platform-feature gaps surfaced (AI Marketing Materials Automation; Trade Show Support Packages), per-dealer direct-to-live trust, industry signals on fertilizer/marketing channels.
 
+## Diagnostics
+
+- [_diagnostic/2026-05-01-gh-probe.md](_diagnostic/2026-05-01-gh-probe.md) — one-shot probe documenting that the `gh` CLI is unavailable in the routine sandbox; explains why routines push branches and rely on `auto-pr.yml` rather than calling `gh pr create`
+
 ## Raw sources
 
 Two namespaces, different rules. See [raw/README.md](raw/README.md) for routine-fetched snapshots and [raw/manual-import/README.md](raw/manual-import/README.md) for human-curated reference materials.
