@@ -103,6 +103,7 @@ Global content catalog for the Terraplex hub. Updated by every ingest. The lint 
 - [research/regulatory/2026-04-update.md](research/regulatory/2026-04-update.md) — April 2026 regulatory roundup: USDA NPG-Ag launch, FAA Part 108 status, DJI appeal
 
 ### Daily digests
+- [research/digests/2026-05-03.md](research/digests/2026-05-03.md) — Revolution Drones (Russell Hedrick / Hickory NC) scales US manufacturing for the GTEEX Revolution lineup that Terraplex distributes (NC/NE/IN/IL components; NC + KS/NE assembly; ~250 sold + 300 more built by Feb); Exedy Drones (Japanese-owned, Michigan, 50–70 L payload) enters US market this year
 - [research/digests/2026-05-02.md](research/digests/2026-05-02.md) — 2025 US ag-drone market data (+58.7% acres / −59% units; Coalition survey + DJI global report) + Pyka commercial momentum (SLC Agricola Brazil fleet expansion; Heinen Brothers' Kelly Hills as first US Pelican 2 customer)
 - [research/digests/2026-05-01.md](research/digests/2026-05-01.md) — Hylio $2M raise + DJI FCC $1.5B impact
 
