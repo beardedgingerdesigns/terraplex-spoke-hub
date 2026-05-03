@@ -1,6 +1,6 @@
 # Design Do's and Don'ts for Dealer Sites
 
-These sites are **professional marketing sites for agricultural businesses** — they need to look credible, load fast, and convert visitors into leads. They compete directly against Agri Spray Drones (polished, content-rich, testimonial-heavy) and indirectly against DJI Agriculture (minimal, premium, corporate). Our advantage is personality, locality, and trust.
+These sites are **professional marketing sites for agricultural businesses** — they need to look credible, load fast, and convert visitors into leads. They compete directly against [Agri Spray Drones](../research/dealer-economics/competitor-distributors.md) (polished, content-rich, testimonial-heavy) and indirectly against [DJI Agriculture](../research/manufacturers/dji-agras.md) (minimal, premium, corporate). Our advantage is personality, locality, and trust.
 
 ## Do
 
