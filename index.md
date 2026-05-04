@@ -103,6 +103,7 @@ Global content catalog for the Terraplex hub. Updated by every ingest. The lint 
 - [research/regulatory/2026-04-update.md](research/regulatory/2026-04-update.md) — April 2026 regulatory roundup: USDA NPG-Ag launch, FAA Part 108 status, DJI appeal
 
 ### Daily digests
+- [research/digests/2026-05-04.md](research/digests/2026-05-04.md) — FAA DETER program effective 2026-04-17 (fast-track settlement for first-time small-UAS violators incl. farmer/ag-service operators) + AgFunder reframes SiFly (Santa Clara; NDAA-compliant Q250, 30-gal payload, ~100-min endurance) as ag-spray entrant
 - [research/digests/2026-05-02.md](research/digests/2026-05-02.md) — 2025 US ag-drone market data (+58.7% acres / −59% units; Coalition survey + DJI global report) + Pyka commercial momentum (SLC Agricola Brazil fleet expansion; Heinen Brothers' Kelly Hills as first US Pelican 2 customer)
 - [research/digests/2026-05-01.md](research/digests/2026-05-01.md) — Hylio $2M raise + DJI FCC $1.5B impact
 
