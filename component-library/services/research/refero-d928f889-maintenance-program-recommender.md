@@ -38,12 +38,13 @@ A service-program landing for ongoing maintenance — the same shape a Terraplex
 ## Source brief
 DJI's [/enterprise-maintenance](https://enterprise.dji.com/enterprise-maintenance) page — the enterprise drone maintenance program landing for the same product domain (drones) Terraplex dealers operate in. Most directly transferable services reference in the library because the page's actual job (sell ongoing maintenance, route by aircraft model + usage age) maps 1:1 onto a Terraplex dealer's [Part 137 service program](../../../content/compliance-program.md) for [R-32](../../../products/r-32.md) / [I-19](../../../products/i-19.md) operators. The library-worthy move is the structural cadence (program-named hero → 3-up value-prop icons → flat 3-tier card comparison → interactive recommender widget → 4-up photo proof → cross-sell tile), reusable across all 6 archetypes via the per-archetype palette and chrome adaptations above.
 
-Sibling services notes (five structurally distinct patterns now in the library):
+Sibling services notes (six structurally distinct patterns total):
 - [kicker-band services](./refero-02ae136e-kicker-band-services.md) — capability-led alternating bands
 - [three-tier inverted-middle](./refero-15fcbffc-three-tier-inverted-middle.md) — price-led tier cards with recommended middle
 - [photo-mosaic services](./refero-2fdf9ace-photo-mosaic-services.md) — breadth-led photo mosaic
 - [dark industry-vertical](./refero-74b10c78-dark-industry-vertical.md) — audience-anchored single-page (dark)
 - [audience-tabbed services](./refero-fef890ec-audience-tabbed-services.md) — multi-audience tab strip
+- [numbered-step process](./refero-d030e2b2-numbered-step-process.md) — process-led 3-step timeline for service-application / onboarding pages
 - this note — service-program with interactive recommender + flat tier comparison + photo proof grid
 
 Hero pairings: [manifesto-creed hero](../../hero/research/refero-b86571f2-manifesto-creed-hero.md) for FIELD/PATRIOT compliance pages; [hardware-lineup dark hero](../../hero/research/refero-0945a36c-hardware-lineup-dark-hero.md) for FORGE/TACTICAL. Related: [content/compliance-program.md](../../../content/compliance-program.md), [content/service-patterns.md](../../../content/service-patterns.md), [products/r-32.md](../../../products/r-32.md), [products/i-19.md](../../../products/i-19.md).
