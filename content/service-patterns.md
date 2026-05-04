@@ -6,7 +6,7 @@
 
 Usable in regulatory support sections.
 
-Sam Welton, Director of Compliance — 641-691-6277. Military UAS background (RQ-7B Shadow), FAA Part 107, 44807/Part 137 expertise. Dealers listing "Regulatory Support" as a service should reference Terraplex's compliance team backing them.
+[Sam Welton, Director of Compliance](compliance-program.md) — 641-691-6277. Military UAS background (RQ-7B Shadow), FAA Part 107, 44807/Part 137 expertise. Dealers listing "Regulatory Support" as a service should reference Terraplex's compliance team backing them.
 
 ## Terraplex service structure
 
