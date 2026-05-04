@@ -47,12 +47,13 @@ A 50/50 split-screen contact pattern where the LEFT half is a dark "credibility 
 ## Source brief
 ElevenLabs's [/contact-sales](https://elevenlabs.io/contact-sales) page — a B2B AI-product Contact Sales page with a hard split-screen credibility-curtain layout. The library-worthy move is the structural cadence (50/50 dark-left / white-right split, dark column carries heading + capability bullets + customer-trust caption + logo wall + star-rating row, white column carries the contact form + paired CTAs), reusable for a Terraplex dealer who needs the contact form to overcome buyer hesitation — heritage dealers, dealers introducing premium [Part 137 service tiers](../../../content/compliance-program.md), or dealers competing against more established regional distributors. The dark column's job is to address the skepticism the customer arrived with; the form's job is to collect data once the skepticism has been addressed.
 
-Sibling contact notes (six structurally distinct patterns now in the library):
+Sibling contact notes (seven structurally distinct patterns total):
 - [two-card decision pivot](./refero-376ca585-two-card-decision-pivot.md) — sales-vs-support intent routing
 - [form-with-topic-checkboxes](./refero-23938dfd-form-with-topic-checkboxes.md) — form-led with conversation-prep checkbox preview
 - [dealer-locator map](./refero-71707203-dealer-locator-map.md) — full-screen map for ~10+ location networks
 - [calendar-led rep card](./refero-701496e7-calendar-led-rep-card.md) — calendar booking with named-rep pre-frame
 - [search-led help center](./refero-00cda269-search-led-help-center.md) — self-serve-first knowledge base with contact as footer fallback
+- [typographic directory](./refero-4a5e550a-typographic-directory.md) — typographic intent + region directory for many-channel dealer ecosystems
 - this note — split-screen dark trust-curtain + form for high-hesitation conversion
 
 Pick guide: locator first if the customer doesn't know which dealer; pivot if they need sales-vs-support routing; checkboxes-form for conversation-prep; calendar for confirmed time; help-center for existing customers; this trust-curtain for new high-hesitation prospects who need pre-frame credibility before they'll fill out a form. Related: [content/compliance-program.md](../../../content/compliance-program.md), [content/positioning.md](../../../content/positioning.md), [content/service-patterns.md](../../../content/service-patterns.md), [products/r-32.md](../../../products/r-32.md), [products/i-19.md](../../../products/i-19.md).
