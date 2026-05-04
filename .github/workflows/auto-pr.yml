@@ -17,6 +17,8 @@ permissions:
 jobs:
   open-pr:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
     steps:
       - uses: actions/github-script@v7
         with:
@@ -34,6 +36,46 @@ jobs:
               const pr = existingPrs[0];
               console.log(`PR already exists for ${branch}: #${pr.number} (${pr.html_url})`);
               return;
+            }
+
+            // Race-condition guard: if the branch has been deleted between push
+            // and now (typically because a rebase + force-push was followed
+            // immediately by `gh pr merge --delete-branch`), don't try to open
+            // a PR for a branch that no longer exists. The merge already
+            // recorded the work; nothing for us to do.
+            try {
+              await github.rest.git.getRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `heads/${branch}`,
+              });
+            } catch (err) {
+              if (err.status === 404) {
+                console.log(`Branch ${branch} no longer exists (likely merged + deleted between push and now). Skipping.`);
+                return;
+              }
+              throw err;
+            }
+
+            // Also skip if a recently-merged PR exists for this branch — the
+            // platform may have force-pushed onto a branch that was already
+            // landed; a new PR would be a duplicate of merged work.
+            const { data: closedPrs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: `${context.repo.owner}:${branch}`,
+              state: 'closed',
+              sort: 'updated',
+              direction: 'desc',
+              per_page: 5,
+            });
+            const recentlyMerged = closedPrs.find(p => p.merged_at);
+            if (recentlyMerged) {
+              const mergedAgeMs = Date.now() - new Date(recentlyMerged.merged_at).getTime();
+              if (mergedAgeMs < 10 * 60 * 1000) {
+                console.log(`PR #${recentlyMerged.number} for ${branch} was merged ${Math.round(mergedAgeMs/1000)}s ago. Skipping duplicate open.`);
+                return;
+              }
             }
 
             // Pull the FIRST commit on this branch (vs main) for an informative title.
@@ -61,12 +103,22 @@ jobs:
               `_Auto-opened by [\`.github/workflows/auto-pr.yml\`](.github/workflows/auto-pr.yml). ` +
               `Branch \`${branch}\` was pushed by a Claude routine; review the diff before merging._`;
 
-            const { data: pr } = await github.rest.pulls.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              head: branch,
-              base: 'main',
-              title,
-              body,
-            });
-            console.log(`Opened PR #${pr.number}: ${pr.html_url}`);
+            try {
+              const { data: pr } = await github.rest.pulls.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                head: branch,
+                base: 'main',
+                title,
+                body,
+              });
+              console.log(`Opened PR #${pr.number}: ${pr.html_url}`);
+            } catch (err) {
+              // The branch may have been deleted between our existence check
+              // above and the create call. Treat that as benign.
+              if (err.status === 422 && /head|invalid/i.test(err.message || '')) {
+                console.log(`pulls.create returned head-invalid (branch likely deleted between checks). Skipping.`);
+                return;
+              }
+              throw err;
+            }
