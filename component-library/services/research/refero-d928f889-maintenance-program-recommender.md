@@ -44,7 +44,7 @@ Sibling services notes (six structurally distinct patterns total):
 - [photo-mosaic services](./refero-2fdf9ace-photo-mosaic-services.md) — breadth-led photo mosaic
 - [dark industry-vertical](./refero-74b10c78-dark-industry-vertical.md) — audience-anchored single-page (dark)
 - [audience-tabbed services](./refero-fef890ec-audience-tabbed-services.md) — multi-audience tab strip
-- [numbered-step process](./refero-d030e2b2-numbered-step-process.md) — process-led 3-step timeline for service-application / onboarding pages
+- [numbered-process / enrollment-led](./refero-d030e2b2-numbered-process-shopper.md) — process-led 3-step timeline for enrollment / service-application / onboarding pages
 - this note — service-program with interactive recommender + flat tier comparison + photo proof grid
 
 Hero pairings: [manifesto-creed hero](../../hero/research/refero-b86571f2-manifesto-creed-hero.md) for FIELD/PATRIOT compliance pages; [hardware-lineup dark hero](../../hero/research/refero-0945a36c-hardware-lineup-dark-hero.md) for FORGE/TACTICAL. Related: [content/compliance-program.md](../../../content/compliance-program.md), [content/service-patterns.md](../../../content/service-patterns.md), [products/r-32.md](../../../products/r-32.md), [products/i-19.md](../../../products/i-19.md).
