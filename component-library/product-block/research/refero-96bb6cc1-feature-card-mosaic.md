@@ -1,0 +1,43 @@
+---
+referoScreenId: 96bb6cc1-274e-49c0-9e0e-952d4914e90c
+referoUrl: https://refero.design/pages/96bb6cc1-274e-49c0-9e0e-952d4914e90c
+section: product-block
+applicableArchetypes: [forge, tactical, terrain, clean, field, patriot]
+savedAt: 2026-05-07
+savedFor: library-audit
+tags: [feature-card-mosaic, contained-rounded-cards, mixed-tone-grid, take-a-closer-look, in-the-box-strip, accessory-cross-sell, product-faq]
+---
+
+## Why this is library-worthy
+A product-block pattern where the feature showcase is a **contained mosaic of rounded-corner cards in a mixed dark/light rotation** — instead of full-bleed bands. One wide hero card spans the top of the grid; smaller 2-up cards fill the lower rows; the row beneath that drops to a single full-width capability card. Each card carries title + 2–3 line paragraph + a single product/lifestyle photograph; the card backgrounds rotate between cream and near-black to set tonal rhythm. Closes the gap between the existing [full-bleed dark-feature-bands](./refero-eb12db31-dark-feature-bands.md) (dark-only, no cards) and the [editorial-warm-feature-blocks](./refero-4b64522d-editorial-warm-feature-blocks.md) (warm cream, asymmetric prose-led). This pattern is **contained, mixed-tone, and modular** — works on any archetype because palette is per-card, not per-page.
+
+## What to take
+- "Take a Closer Look" header (or equivalent — "Built to handle every job", "What you get") opens the block. Sentence-case sans-serif, ~28–36px, top-centered.
+- Card grid layout: ONE wide hero card (spans full row) → 2-up row of smaller cards → 2-up row of smaller cards → ONE wide capability card (full row). Approximate ratios: hero card ~50% page-height, 2-up cards ~35% page-height each, closing wide card ~40% page-height. The asymmetry IS the rhythm — don't reduce to a uniform 2×3 grid.
+- Each card: rounded ~16–20px corners, ~32–48px internal padding. Card background is solid (cream OR near-black OR muted brand-color), no gradients. Photograph anchors one half of the card; title + paragraph anchors the other half. Within a single card, photograph occupies ~60% and text ~40%.
+- **Tone rotation is the affordance.** In the source: hero card = cream + product-stack render; row 2 = dark navy on left + cream on right; row 3 = cream on left + dark on right; closing card = dark spanning full width. The dark/light rotation per cell carries the eye through the grid. Pair-rule: never put two dark cards adjacent to each other on the same row.
+- Card titles are short statement-headlines (3–6 words, sentence-case) sized at ~22–28px. Paragraphs are 2–3 lines of body copy (~14–16px) and END with the proof — no CTAs inside individual feature cards. The mosaic is information-dense but click-light.
+- Below the feature mosaic, a separate **"In the Box" component strip** runs as a flat icon-grid (5–7 columns × 3–4 rows) of small rectangular tiles, each tile a tight cropped photograph of an included component + label below. No backgrounds, no borders — just the photograph as the affordance. Closes the documentation gap that the feature mosaic doesn't fill.
+- Optional close: an **accessory cross-sell rail** above or below the feature mosaic with 3–5 horizontal accessory rows (small thumbnail + name + price + quantity stepper + Add link). Closes the buy-page upsell pathway without breaking out into a separate section.
+- Optional final close: a **product FAQ accordion** (5–8 collapsed questions) in a single-column at the bottom of the block. Closes the "what about this edge case?" gap without expanding the feature mosaic to cover every detail.
+
+## What NOT to take
+- Don't reduce the asymmetric grid to a uniform 2×3 or 3×2. The asymmetry (1 wide → 2-up → 2-up → 1 wide) is what gives the mosaic its rhythm; uniform grids read as a generic feature wall.
+- Don't add a CTA to every card. The mosaic is a SHOW, not a sales loop. CTAs belong on the buy-tier picker above the mosaic — not inside feature cards.
+- Don't put two dark cards adjacent on the same row. The pattern's tonal rhythm depends on dark-cream alternation per row; two darks side-by-side collapse into a feature-band that fights the contained-card affordance.
+- Don't import the source's literal tech-luxury copy register ("Integrated and Modular Design", "Cinematic Footage"). The transferable move is the asymmetric-mosaic + tonal-rotation cadence, not the content domain.
+- Don't substitute icons for photographs in the cards. The pattern's credibility move is the product-and-environment photograph occupying ~60% of every card — icons collapse the section into a generic capability grid.
+- FIELD's no-motion rule applies to the photographs themselves: source uses still cinematic shots, not autoplay video clips, so FIELD compatibility holds. If a future variant of this pattern uses autoplay video-in-card, drop FIELD compatibility.
+
+## Adaptation notes (cross-archetype)
+- FIELD: cream page background, card rotation through warm-amber + cream-inset + warm-charcoal + cream + sage-tinted at matched ~60–70% saturation. Photographs in every card are golden-hour operator-and-equipment shots. NO dark-navy cards — for FIELD the "dark" position rotates to warm-charcoal or deep-amber instead. See [FIELD archetype](../../../archetypes/field.md). Pairs with the [hands-on craft hero](../../hero/research/refero-be842c1e-hands-on-craft-hero.md).
+- CLEAN: white page background, card rotation through brand-navy + white + brand-charcoal + cream-inset + brand-tinted-pale at lower saturation than FIELD. Photographs are clean equipment-and-operator shots with subtle drop-shadow on cream cards. See [CLEAN archetype](../../../archetypes/clean.md).
+- TERRAIN: card rotation IS the alternating-band rhythm at card scale — clay + cream + topographic-charcoal + cream + clay. Add a thin contour-line motif at one edge of every dark card. See [TERRAIN archetype](../../../archetypes/terrain.md). Pair with the [aerial-photo-spine product-block](./refero-4c2ed506-aerial-photo-spine.md) for the "long product" page where a mosaic alone would feel under-paced.
+- PATRIOT: cream page background, card rotation through deep-navy + cream + barn-red + cream + warm-charcoal at matched saturation. Photographs are late-afternoon American-farmland operator shots; the barn-red card is the single flag-color-saturated card in the rotation. See [PATRIOT archetype](../../../archetypes/patriot.md).
+- FORGE: native fit. Card rotation through near-black + ember-warm-charcoal + near-black-with-ember-rim + warm-charcoal at matched saturation. Photographs are rim-lit equipment-at-dusk / forge-glow shots. The cream-tinted positions in the rotation become warm-charcoal-with-ember-edge instead — keeps the page dark-dominant. See [FORGE archetype](../../../archetypes/forge.md). Pairs with the [hardware-lineup dark hero](../../hero/research/refero-0945a36c-hardware-lineup-dark-hero.md).
+- TACTICAL: tighter geometry — sharper card corners (~8px not 16–20px). Card rotation through near-black + steel-charcoal + cyan-edge-on-near-black + monochrome-dark at matched saturation. Photographs are studio-shot equipment in seamless lighting. Add 1px corner brackets to every card. See [TACTICAL archetype](../../../archetypes/tactical.md). Pairs with the [topographic layered-bg hero](../../hero/research/refero-ae84b62a-topographic-layered-bg.md).
+
+## Source brief
+DJI's Ronin 4D-6K product page — the dealer-equivalent buy-page for the company's flagship cinema-camera-with-gimbal-and-LiDAR system. The library-worthy move is the structural cadence (price + tier picker + accessory rail at top → "Take a Closer Look" feature mosaic with asymmetric mixed-tone cards → "In the Box" component strip → product FAQ accordion). Most directly transferable for a Terraplex dealer's [R-32 buy-page](../../../products/r-32.md) or [I-19 buy-page](../../../products/i-19.md) when the [PDP hero](../../hero/research/refero-d4c69c08-pdp-product-detail-hero.md) is followed by a feature showcase that doesn't want to be either full-bleed bands ([dark-feature-bands](./refero-eb12db31-dark-feature-bands.md), [alternating-pastel-stripes](./refero-4bcd783f-alternating-pastel-stripes.md)) or a documentation-led [spec-sheet](./refero-27715bc5-spec-sheet-product-block.md).
+
+Pick guide: feature-card mosaic when the dealer's product needs to communicate 5–8 capabilities with photographs but the page rhythm calls for contained modular cards rather than full-bleed bands or a documentation-led spec sheet. Pairs naturally with [PDP hero](../../hero/research/refero-d4c69c08-pdp-product-detail-hero.md) above and [head-to-head comparison](./refero-a1142f19-head-to-head-comparison.md) below for a multi-model dealer.
