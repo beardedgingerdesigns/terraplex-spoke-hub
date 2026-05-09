@@ -1,0 +1,16 @@
+# Industry digests — catalog
+
+Daily industry digests filed by the `industry-digest-daily` routine. Each entry is a one-line summary; click through for sources + full body. Listed newest-first.
+
+See [../README.md](../README.md) for the broader research-layer schema (source allowlist, curation gate).
+
+## Digests
+
+- [2026-05-09.md](2026-05-09.md) — FCC public-comment window on DJI (ET Docket 26-22) and Autel (ET Docket 26-23) Petitions for Reconsideration of the December 23, 2025 Covered List ruling closes EOD Monday 2026-05-11; 460+ comments logged in ECFS as of 2026-05-07 incl. farmers, Part 107 holders, SAR operators; DoD filed opposition memo 2026-04-10 citing classified intel; proceeding is procedurally distinct from DJI's Ninth Circuit Case 26-1029 (currently in abeyance briefing)
+- [2026-05-07.md](2026-05-07.md) — FAA Section 2209 NPRM published 2026-05-06 (Federal Register Doc 2026-08943, Docket FAA-2026-4558, comment deadline 2026-07-06): proposes new 14 CFR Part 74 with two-tier UAFR framework (Standard / Special) over fixed-site critical-infrastructure facilities; preserves Part 137 transit carve-out at § 74.250 (Remote ID + shortest-practicable + advance notification); "food and agriculture" is one of the 16 NSM-22 sectors so grain elevators / ethanol plants / food-processing sites can petition
+- [2026-05-06.md](2026-05-06.md) — FAA Section 2209 NPRM published in Federal Register 2026-05-06 (Doc 2026-08943, Docket FAA-2026-4558; proposed § 74.250 explicitly preserves Part 137 transit access through Standard UAFRs with Remote ID + facility notification; comments close 2026-07-06) + Texas AG escalates Anzu Robotics deceptive-trade-practices enforcement to distributor Drone Nerds via Civil Investigative Demand under Texas DTPA, establishing state-level precedent for litigating drone-distributor country-of-origin claims
+- [2026-05-05.md](2026-05-05.md) — DJI Agrishow 2026 announcement: global ag-drone fleet hits 600,000 units (+50% vs prior 400K Agrishow 2025 figure), 100+ countries, 3,500 service centers, 7,000+ certified instructors, 410Mt water saved / 51Mt CO₂ cut — fresh global benchmark while US channel remains gated by FCC ruling
+- [2026-05-04.md](2026-05-04.md) — FAA DETER program effective 2026-04-17 (fast-track settlement for first-time small-UAS violators incl. farmer/ag-service operators) + AgFunder reframes SiFly (Santa Clara; NDAA-compliant Q250, 30-gal payload, ~100-min endurance) as ag-spray entrant
+- [2026-05-03.md](2026-05-03.md) — Revolution Drones (Russell Hedrick / Hickory NC) scales US manufacturing for the GTEEX Revolution lineup that Terraplex distributes (NC/NE/IN/IL components; NC + KS/NE assembly; ~250 sold + 300 more built by Feb); Exedy Drones (Japanese-owned, Michigan, 50–70 L payload) enters US market this year
+- [2026-05-02.md](2026-05-02.md) — 2025 US ag-drone market data (+58.7% acres / −59% units; Coalition survey + DJI global report) + Pyka commercial momentum (SLC Agricola Brazil fleet expansion; Heinen Brothers' Kelly Hills as first US Pelican 2 customer)
+- [2026-05-01.md](2026-05-01.md) — Hylio $2M raise + DJI FCC $1.5B impact
