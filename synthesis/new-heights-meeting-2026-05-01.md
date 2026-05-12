@@ -19,7 +19,7 @@ Two major platform-feature ideas surfaced (Dealer Portal AI marketing-materials 
 
 ## Decisions made (both parties aligned)
 
-1. **Drone product pages approved for immediate deployment to live.** The new R-32 / I-19 dedicated product pages with MSRP, request-pricing CTA, full spec sheet, "Why operators choose," and FAQ — built earlier this morning per [sites/new-heights/NOTES.md](https://github.com/beardedgingerdesigns/new-heights/blob/main/NOTES.md) entries — are signed off and pushing to live. Captures the user benefit Josh agreed with: "at least getting pricing on the websites as opposed to … gating it behind a contact form."
+1. **Drone product pages approved for immediate deployment to live.** The new [R-32](../products/r-32.md) / [I-19](../products/i-19.md) dedicated product pages with MSRP, request-pricing CTA, full spec sheet, "Why operators choose," and FAQ — built earlier this morning per [sites/new-heights/NOTES.md](https://github.com/beardedgingerdesigns/new-heights/blob/main/NOTES.md) entries — are signed off and pushing to live. Captures the user benefit Josh agreed with: "at least getting pricing on the websites as opposed to … gating it behind a contact form."
 2. **Process change: direct-to-live deployment for New Heights.** Josh authorized Justin to skip the prior dev-site review step on future updates: "I would just go ahead and just push it out … I trust you 100% on what you're doing." This is **per-dealer trust calibration**, not a platform-wide policy change. Documented in [sites/new-heights/NOTES.md](https://github.com/beardedgingerdesigns/new-heights/blob/main/NOTES.md) "Recent decisions."
 
 ## Platform-wide ideas surfaced

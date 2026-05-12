@@ -50,7 +50,7 @@ Sibling services notes (eight structurally distinct patterns now in the library)
 - [dark industry-vertical](./refero-74b10c78-dark-industry-vertical.md) — audience-anchored single-page
 - [audience-tabbed services](./refero-fef890ec-audience-tabbed-services.md) — multi-audience tab strip
 - [maintenance-program-recommender](./refero-d928f889-maintenance-program-recommender.md) — flat tier comparison + recommender
-- [numbered-step-process](./refero-d030e2b2-numbered-step-process.md) — 3-step timeline + ZIP locator (service-application + enrollment variants)
+- [numbered-process shopper](./refero-d030e2b2-numbered-process-shopper.md) — 3-step timeline + ZIP locator (service-application + enrollment variants)
 - [specialist marketplace](./refero-d30b8a54-specialist-marketplace.md) — vetted-third-party routing
 - [photo-led process steps](./refero-3d9feff9-photo-led-process-steps.md) — 6-step photo grid
 - [stats-led impact](./refero-41c5ab43-stats-led-impact-services.md) — operational-scale stat bands

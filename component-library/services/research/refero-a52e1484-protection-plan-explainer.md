@@ -45,4 +45,4 @@ Pick guide: protection-plan explainer when a dealer offers ONE specific paid pla
 - [maintenance-program recommender](./refero-d928f889-maintenance-program-recommender.md) — when the plan needs an interactive tier-recommender widget
 - [stats-led impact services](./refero-41c5ab43-stats-led-impact-services.md) — when scale-of-operations is the differentiation
 - [case-study narrative](./refero-1e6c57eb-case-study-narrative.md) — when a single named customer's outcome carries the credibility
-- [numbered-step process](./refero-d030e2b2-numbered-step-process.md) — when the plan is enrollment-led (Part 107 cohort, fleet-share recruitment) rather than transactional buy-now
+- [numbered-process shopper](./refero-d030e2b2-numbered-process-shopper.md) — when the plan is enrollment-led (Part 107 cohort, fleet-share recruitment) rather than transactional buy-now
