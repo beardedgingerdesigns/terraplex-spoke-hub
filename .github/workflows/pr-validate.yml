@@ -1,0 +1,29 @@
+name: pr-validate
+
+# Structural lint for chore/* PRs. Gates auto-merge.
+# Validates frontmatter completeness, link integrity, and branch-vs-files alignment.
+# Does NOT judge editorial quality — that's the human's job via the daily digest email.
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run validator
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: node .github/scripts/validate-pr.mjs
