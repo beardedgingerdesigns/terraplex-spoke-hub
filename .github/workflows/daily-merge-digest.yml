@@ -1,0 +1,29 @@
+name: daily-merge-digest
+
+# Each morning, email a summary of everything that auto-merged in the last 24h.
+# Pulls "Open questions for human review" sections from each PR body so the email
+# is the review — Justin reads the email, not the PRs.
+
+on:
+  schedule:
+    - cron: '0 13 * * *'  # 13:00 UTC daily = 8am EDT / 7am CDT
+  workflow_dispatch:        # Manual trigger for testing
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Send digest email
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DIGEST_EMAIL_TO: ${{ secrets.DIGEST_EMAIL_TO }}
+          DIGEST_EMAIL_FROM: ${{ secrets.DIGEST_EMAIL_FROM }}
+          REPO: ${{ github.repository }}
+        run: node .github/scripts/daily-merge-digest.mjs

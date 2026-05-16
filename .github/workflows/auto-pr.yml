@@ -11,7 +11,7 @@ on:
       - 'chore/**'
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
@@ -103,6 +103,7 @@ jobs:
               `_Auto-opened by [\`.github/workflows/auto-pr.yml\`](.github/workflows/auto-pr.yml). ` +
               `Branch \`${branch}\` was pushed by a Claude routine; review the diff before merging._`;
 
+            let createdPr;
             try {
               const { data: pr } = await github.rest.pulls.create({
                 owner: context.repo.owner,
@@ -112,6 +113,7 @@ jobs:
                 title,
                 body,
               });
+              createdPr = pr;
               console.log(`Opened PR #${pr.number}: ${pr.html_url}`);
             } catch (err) {
               // The branch may have been deleted between our existence check
@@ -121,4 +123,20 @@ jobs:
                 return;
               }
               throw err;
+            }
+
+            // Queue the PR to auto-merge once required checks (pr-validate) pass.
+            // Falls back gracefully if auto-merge isn't enabled on the repo yet.
+            try {
+              await github.graphql(`
+                mutation($pullRequestId: ID!) {
+                  enablePullRequestAutoMerge(input: {
+                    pullRequestId: $pullRequestId,
+                    mergeMethod: SQUASH
+                  }) { pullRequest { number } }
+                }
+              `, { pullRequestId: createdPr.node_id });
+              console.log(`Auto-merge enabled on #${createdPr.number}`);
+            } catch (err) {
+              console.log(`Could not enable auto-merge on #${createdPr.number}: ${err.message}`);
             }
