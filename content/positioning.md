@@ -32,7 +32,7 @@ Use these phrases verbatim where appropriate. Mixing them with original prose is
 - "Every farm is different. Every need is different. There's a right drone for you, and we'll help you find it."
 - "We carefully research agricultural drones from each major manufacturer to offer our customers the best options for their operation."
 
-**Compliance program framing** (when mentioning Sam Welton or Part 137 / 107):
+**Compliance program framing** (when mentioning [Sam Welton](compliance-program.md) or Part 137 / 107):
 - "Compliance Made Easy"
 - "360 service"
 - "Behind-the-scenes partner"
@@ -47,7 +47,7 @@ Use these phrases verbatim where appropriate. Mixing them with original prose is
 ## Brand structure (do not confuse on dealer sites)
 
 - **Terraplex Ag** is a *distributor*. Headquartered in Odebolt, Iowa.
-- **GTEEX** is the manufacturer of the **Revolution Drone series** (R-32, I-19).
+- **GTEEX** is the manufacturer of the **Revolution Drone series** ([R-32](../products/r-32.md), [I-19](../products/i-19.md)).
 - Terraplex is the **exclusive US distributor** of the Revolution Drone series.
 - Dealer sites are part of the Terraplex network — extensions of, not alternatives to, the parent brand.
 

@@ -71,7 +71,7 @@ When a customer is comparison-shopping, they're often pricing Terraplex against 
 - **For dealer positioning copy**: Terraplex dealers should lead with single-brand depth (every dealer knows Revolution inside-out) rather than multi-brand breadth (Agri Spray's framing). When a customer says "I'm also looking at Agri Spray," the Terraplex counter is: "We sell the platform we use; they sell whatever's in stock. Different model, different support depth."
 - **For pricing conversations**: Bestway Ag's publicly-listed prices (especially DT1 at $32K, DT2 at $37.5K) are useful comparison anchors when discussing Terraplex's trailer offerings. Don't quote Terraplex's prices in writing — but do reference Bestway as the public benchmark dealers should price against.
 - **For onboarding scripts**: a Terraplex new dealer asking "what do my customers compare us to?" should know all three. Default rebuttals: vs Agri Spray = single-brand focus + farmer-owned reseller framing; vs Bestway = US-built (Revolution) vs DJI's FCC exposure; vs Rantizo = sales+service depth vs services-only.
-- **For equipment recommendations**: Bestway Ag's drone-trailer product line (DT-Mini / DT1 / DT2) is a category gap in Terraplex's current portfolio. If a customer needs a trailer-with-drone package, this is a competitive vulnerability worth flagging upstream to Terraplex Ag if it persists.
+- **For equipment recommendations**: Bestway Ag's drone-trailer product line (DT-Mini / DT1 / DT2) is a category gap in Terraplex's current portfolio. If a customer needs a trailer-with-drone package, this is a competitive vulnerability worth flagging upstream to [Terraplex Ag](../manufacturers/terraplex.md) if it persists.
 
 ## Open questions / things to revisit
 

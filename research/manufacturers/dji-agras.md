@@ -40,7 +40,7 @@ DJI Agras remains the dominant ag spray drone supplier in the US by installed ba
 
 ### Revision 2026-05-01b (manual-import augment)
 
-Augmenting from a snapshot of [DJI's official ag site homepage](raw/manual-import/competitors/dji-agriculture/2026-05-01-homepage.md) accessed 2026-05-01:
+Augmenting from a snapshot of [DJI's official ag site homepage](../../raw/manual-import/competitors/dji-agriculture/2026-05-01-homepage.md) accessed 2026-05-01:
 
 - **Additional 2026 SKUs in the announced lineup**: T100, T70P, and T25P are positioned as new platforms launched globally in late-2025/early-2026. These are part of the $860M new-SKU exposure under the FCC ruling — the most directly affected products [source: https://ag.dji.com].
 - **Global scale claim**: "Over 300,000 drones operate globally, treating more than 500 million hectares of farmland around the world" [source: https://ag.dji.com]. Useful as a comparison anchor when a customer asks about deployed installed base — DJI's number dwarfs every US-built competitor combined.
