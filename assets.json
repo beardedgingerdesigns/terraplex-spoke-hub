@@ -28,5 +28,543 @@
     "url": "https://storage.googleapis.com/bgd-sites/terraplex/Terraplex_I-19_SellSheet.pdf",
     "type": "application/pdf",
     "description": "I-19 official sell sheet PDF for Download Spec Sheet CTAs"
+  },
+  "assetPools": {
+    "gteexLogoIconVariants": [
+      {
+        "logicalName": "gteexIconBW",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/logos/gteex-revolution-icon-bw.png",
+        "type": "image/png",
+        "sourceHash": "sha256:4dabd60e65c1bd5c7d0253595ec44313c22374200e9096d7c0fa6cc40ea65d43",
+        "sourceFile": "raw/GTEEX Revolution Logo Family/GTEEX_Revolution_Icon_BW.png",
+        "description": "A bold black-and-white stylized letter R formed by an eagle's head profile with a sparkle accent.",
+        "subjects": [
+          "eagle head",
+          "letter R",
+          "sparkle"
+        ],
+        "composition": "studio-isolation",
+        "mood": [
+          "bold",
+          "heroic",
+          "iconic",
+          "industrial"
+        ],
+        "bestFor": [
+          "favicon",
+          "small-button-mark",
+          "primary-header-light-bg",
+          "footer-callout",
+          "print",
+          "watermark"
+        ],
+        "dominantColors": [
+          "black",
+          "white"
+        ],
+        "distinctive": "negative-space eagle silhouette cleverly nested inside the counter of an R-shaped mark",
+        "treatment": "bw",
+        "variant": "icon"
+      },
+      {
+        "logicalName": "gteexIconColor",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/logos/gteex-revolution-icon-cmyk-01.png",
+        "type": "image/png",
+        "sourceHash": "sha256:315a0ac71009f69fd93c680d83befd4c92def48cb8cc6c7a69c39449b189ae52",
+        "sourceFile": "raw/GTEEX Revolution Logo Family/GTEEX_Revolution_Icon_CMYK-01.png",
+        "description": "A stylized eagle head silhouette in red paired with a bold navy blue 'R' or 'X' geometric mark, forming a unified emblem.",
+        "subjects": [
+          "eagle head",
+          "letterform mark",
+          "star accent"
+        ],
+        "composition": "studio-isolation",
+        "mood": [
+          "bold",
+          "patriotic",
+          "powerful",
+          "industrial"
+        ],
+        "bestFor": [
+          "favicon",
+          "small-button-mark",
+          "primary-header-light-bg",
+          "footer-callout",
+          "print",
+          "watermark"
+        ],
+        "dominantColors": [
+          "red",
+          "navy blue",
+          "white"
+        ],
+        "distinctive": "eagle silhouette integrated with an angular letterform creating a dual-symbol brand mark",
+        "treatment": "color",
+        "variant": "icon"
+      },
+      {
+        "logicalName": "gteexIconReverse",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/logos/gteex-revolution-icon-reverse.png",
+        "type": "image/png",
+        "sourceHash": "sha256:742071beb551e6f788e6903ea892f1edf7988d945310a8d818311ea890e6fdc1",
+        "sourceFile": "raw/GTEEX Revolution Logo Family/GTEEX_Revolution_Icon_Reverse.png",
+        "description": "A reverse (white) version of the GTEEX Revolution icon mark, designed to appear on dark backgrounds where only the white logo silhouette is visible.",
+        "subjects": [
+          "GTEEX Revolution icon",
+          "brand mark",
+          "logo glyph"
+        ],
+        "composition": "studio-isolation",
+        "mood": [
+          "clean",
+          "minimal",
+          "bold",
+          "industrial"
+        ],
+        "bestFor": [
+          "hero-overlay-dark",
+          "footer-on-dark",
+          "small-button-mark",
+          "favicon",
+          "watermark"
+        ],
+        "dominantColors": [
+          "white"
+        ],
+        "distinctive": "white reverse treatment intended for placement on dark or photographic backgrounds",
+        "treatment": "reverse",
+        "variant": "icon"
+      }
+    ],
+    "gteexLogoFullVariants": [
+      {
+        "logicalName": "gteexLogoBW",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/logos/gteex-revolution-logo-bw.png",
+        "type": "image/png",
+        "sourceHash": "sha256:ec5e22efaff2054bfaf3cbb1544099cb138309fe5bbef63f46cde4d31c75fd40",
+        "sourceFile": "raw/GTEEX Revolution Logo Family/GTEEX_Revolution_Logo_BW.png",
+        "description": "Horizontal black-and-white logo lockup pairing a stylized eagle-head emblem inside an angular R-shaped mark with the wordmark 'GTEEX REVOLUTION' set in heavy condensed sans-serif.",
+        "subjects": [
+          "eagle head emblem",
+          "R monogram",
+          "GTEEX Revolution wordmark"
+        ],
+        "composition": "studio-isolation",
+        "mood": [
+          "bold",
+          "aggressive",
+          "industrial",
+          "confident"
+        ],
+        "bestFor": [
+          "primary-header-light-bg",
+          "footer-callout",
+          "print",
+          "watermark"
+        ],
+        "dominantColors": [
+          "black",
+          "white"
+        ],
+        "distinctive": "predatory eagle-head fused into a sharp diagonal R monogram, giving the lockup a performance/motorsport edge",
+        "treatment": "bw",
+        "variant": "lockup"
+      },
+      {
+        "logicalName": "gteexLogoColor",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/logos/gteex-revolution-logo-cmyk-01.png",
+        "type": "image/png",
+        "sourceHash": "sha256:7d9e885544d4cbda704697afd317375e0232c49525d0e4510124f0b1654fa193",
+        "sourceFile": "raw/GTEEX Revolution Logo Family/GTEEX_Revolution_Logo_CMYK-01.png",
+        "description": "Horizontal logo lockup pairing a stylized eagle-head mark inside an angular shape with the bold wordmark 'GTEEX REVOLUTION' in navy.",
+        "subjects": [
+          "eagle head icon",
+          "geometric badge shape",
+          "GTEEX wordmark",
+          "Revolution wordmark"
+        ],
+        "composition": "studio-isolation",
+        "mood": [
+          "bold",
+          "patriotic",
+          "industrial",
+          "confident",
+          "athletic"
+        ],
+        "bestFor": [
+          "primary-header-light-bg",
+          "footer-callout",
+          "product-card",
+          "print"
+        ],
+        "dominantColors": [
+          "navy blue",
+          "red",
+          "white"
+        ],
+        "distinctive": "fierce eagle-head emblem fused into an angular badge that doubles as a stylized monogram",
+        "treatment": "color",
+        "variant": "lockup"
+      },
+      {
+        "logicalName": "gteexLogoReverse",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/logos/gteex-revolution-logo-reverse.png",
+        "type": "image/png",
+        "sourceHash": "sha256:dec42426b5448cf374562b15a12f202f4f445f613e45f8cce5ec0ee0b864063e",
+        "sourceFile": "raw/GTEEX Revolution Logo Family/GTEEX_Revolution_Logo_Reverse.png",
+        "description": "All-white reverse version of the GTEEX Revolution logo, designed to appear on dark backgrounds where the white marks render visible.",
+        "subjects": [
+          "GTEEX Revolution wordmark",
+          "logo lockup"
+        ],
+        "composition": "studio-isolation",
+        "mood": [
+          "clean",
+          "bold",
+          "industrial",
+          "modern"
+        ],
+        "bestFor": [
+          "hero-overlay-dark",
+          "footer-on-dark",
+          "primary-header-dark-bg",
+          "watermark"
+        ],
+        "dominantColors": [
+          "white"
+        ],
+        "distinctive": "Pure white reverse treatment intended exclusively for dark-background placement",
+        "treatment": "reverse",
+        "variant": "lockup"
+      }
+    ],
+    "i19Gallery": [
+      {
+        "logicalName": "i19Action20",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/i-19-gallery/ind19drone-still-20.jpg",
+        "type": "image/jpeg",
+        "sourceHash": "sha256:1c6ba81a1fef70d407c781f59a07d2d43d4ca6a47dceef9d465a3360ddf6d4d1",
+        "sourceFile": "raw/i-19-images/Ind19Drone_Still_20.jpg",
+        "description": "An agricultural spray drone with American flag livery hovers low over a lush green crop field, releasing fine mist from twin nozzles.",
+        "subjects": [
+          "spray drone",
+          "quadcopter",
+          "crop field",
+          "spray mist",
+          "rural landscape"
+        ],
+        "composition": "wide",
+        "mood": [
+          "powerful",
+          "modern",
+          "patriotic",
+          "industrious",
+          "bright"
+        ],
+        "bestFor": [
+          "hero",
+          "hero-overlay-dark",
+          "lifestyle-block",
+          "detail-feature",
+          "primary-header-light-bg"
+        ],
+        "dominantColors": [
+          "green",
+          "white",
+          "red-blue"
+        ],
+        "distinctive": "American flag-painted canopy on an active spraying drone caught mid-mission over vibrant green crops"
+      },
+      {
+        "logicalName": "i19Action21",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/i-19-gallery/ind19drone-still-21.jpg",
+        "type": "image/jpeg",
+        "sourceHash": "sha256:f108f8811cd2ce892536b85c61501994b65c388f40460d416f956718e34b824f",
+        "sourceFile": "raw/i-19-images/Ind19Drone_Still_21.jpg",
+        "description": "An agricultural spray drone hovers low over a lush green alfalfa field, releasing a fine mist while wind turbines line the horizon under a clear blue sky.",
+        "subjects": [
+          "spray drone",
+          "alfalfa field",
+          "spray mist",
+          "wind turbines",
+          "farmland horizon"
+        ],
+        "composition": "aerial",
+        "mood": [
+          "expansive",
+          "technical",
+          "productive",
+          "clean",
+          "modern-agricultural"
+        ],
+        "bestFor": [
+          "hero",
+          "hero-overlay-dark",
+          "lifestyle-block",
+          "detail-feature",
+          "footer-callout"
+        ],
+        "dominantColors": [
+          "verdant green",
+          "sky blue",
+          "white"
+        ],
+        "distinctive": "the swirling spray plume curling off the drone mid-application captures the product actively working in-field rather than posed"
+      },
+      {
+        "logicalName": "i19Action22",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/i-19-gallery/ind19drone-still-22.jpg",
+        "type": "image/jpeg",
+        "sourceHash": "sha256:e0e4375a8e895e6eb900b500957fc692b7e31405c91c88d0a7972a673079bc76",
+        "sourceFile": "raw/i-19-images/Ind19Drone_Still_22.jpg",
+        "description": "An agricultural spray drone hovers low over a lush green field, releasing a fine mist while wind turbines spin on the horizon under a hazy sky.",
+        "subjects": [
+          "spray drone",
+          "crop field",
+          "wind turbines",
+          "horizon",
+          "farmland"
+        ],
+        "composition": "wide",
+        "mood": [
+          "modern",
+          "industrial",
+          "sustainable",
+          "expansive",
+          "purposeful"
+        ],
+        "bestFor": [
+          "hero",
+          "hero-overlay-dark",
+          "lifestyle-block",
+          "detail-feature",
+          "footer-callout"
+        ],
+        "dominantColors": [
+          "green",
+          "sky-grey",
+          "white"
+        ],
+        "distinctive": "active spray mist captured mid-application with wind turbines framing the drone — pairs precision-ag tech with renewable energy in one shot"
+      },
+      {
+        "logicalName": "i19Action23",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/i-19-gallery/ind19drone-still-23.jpg",
+        "type": "image/jpeg",
+        "sourceHash": "sha256:cfb0a5a9c346e382f773752e6a8153393be50cec9a6ef4f5302ebbb62622cfda",
+        "sourceFile": "raw/i-19-images/Ind19Drone_Still_23.jpg",
+        "description": "An agricultural spray drone hovers low over a green field, releasing fine mist from nozzles beneath its frame.",
+        "subjects": [
+          "spray drone",
+          "agricultural UAV",
+          "rotors",
+          "spray nozzles",
+          "green field",
+          "wind turbines in background"
+        ],
+        "composition": "wide",
+        "mood": [
+          "modern",
+          "precise",
+          "industrial",
+          "efficient",
+          "innovative"
+        ],
+        "bestFor": [
+          "hero",
+          "hero-overlay-dark",
+          "lifestyle-block",
+          "detail-feature",
+          "product-card"
+        ],
+        "dominantColors": [
+          "green",
+          "white",
+          "red"
+        ],
+        "distinctive": "active in-flight spraying shot with visible mist plumes against a vivid green field — captures the drone mid-task rather than static"
+      },
+      {
+        "logicalName": "i19Action24",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/i-19-gallery/ind19drone-still-24.jpg",
+        "type": "image/jpeg",
+        "sourceHash": "sha256:2a4658919a0c71a6ddc80d7cc5c035e073f76ee52fb7c95a02c8cfdfc6f9510d",
+        "sourceFile": "raw/i-19-images/Ind19Drone_Still_24.jpg",
+        "description": "An agricultural spray drone hovers over a lush green crop field, releasing a fine mist that catches sunlight to form a small rainbow, with a wind turbine and support vehicles in the distance.",
+        "subjects": [
+          "spray drone",
+          "green crop field",
+          "rainbow mist",
+          "wind turbine",
+          "support vehicles",
+          "harvested corn field",
+          "rural horizon"
+        ],
+        "composition": "aerial",
+        "mood": [
+          "expansive",
+          "modern",
+          "agricultural",
+          "optimistic",
+          "technological"
+        ],
+        "bestFor": [
+          "hero",
+          "hero-overlay-dark",
+          "lifestyle-block",
+          "footer-callout",
+          "detail-feature"
+        ],
+        "dominantColors": [
+          "verdant green",
+          "sky blue",
+          "golden tan"
+        ],
+        "distinctive": "the prismatic rainbow refracting through the drone's spray plume against a vivid green field"
+      },
+      {
+        "logicalName": "i19Action25",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/i-19-gallery/ind19drone-still-25.jpg",
+        "type": "image/jpeg",
+        "sourceHash": "sha256:eac5e0b40fd168999ab4b58fe5a4b1d68e20296adb73e1235934cbae729035d1",
+        "sourceFile": "raw/i-19-images/Ind19Drone_Still_25.jpg",
+        "description": "An agricultural spray drone with a patriotic stars-and-stripes painted hull hovers low over a green crop field, releasing fine mist from its boom nozzles.",
+        "subjects": [
+          "agricultural spray drone",
+          "crop field",
+          "spray mist",
+          "rural farmland",
+          "horizon treeline"
+        ],
+        "composition": "wide",
+        "mood": [
+          "industrial",
+          "purposeful",
+          "patriotic",
+          "modern",
+          "agricultural"
+        ],
+        "bestFor": [
+          "hero",
+          "hero-overlay-dark",
+          "lifestyle-block",
+          "detail-feature",
+          "primary-header-light-bg"
+        ],
+        "dominantColors": [
+          "green",
+          "sky blue",
+          "red-white-blue"
+        ],
+        "distinctive": "American flag livery on a working spray drone caught mid-application over a verdant field"
+      },
+      {
+        "logicalName": "i19Action26",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/i-19-gallery/ind19drone-still-26.jpg",
+        "type": "image/jpeg",
+        "sourceHash": "sha256:30824abc3b149fd02bdae3695629895e5b5bb854656ae4f5874e9b1074a82372",
+        "sourceFile": "raw/i-19-images/Ind19Drone_Still_26.jpg",
+        "description": "An agricultural spray drone hovers low over a vibrant green grass field, releasing a fine mist from its nozzle.",
+        "subjects": [
+          "agricultural drone",
+          "spray nozzle",
+          "rotor blade",
+          "mist spray",
+          "grass field"
+        ],
+        "composition": "close-up",
+        "mood": [
+          "precise",
+          "industrial",
+          "active",
+          "modern"
+        ],
+        "bestFor": [
+          "hero",
+          "hero-overlay-dark",
+          "lifestyle-block",
+          "detail-feature",
+          "product-card"
+        ],
+        "dominantColors": [
+          "green",
+          "white",
+          "red"
+        ],
+        "distinctive": "the visible fan of atomized spray captured mid-application against a saturated turf backdrop"
+      },
+      {
+        "logicalName": "i19Action27",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/i-19-gallery/ind19drone-still-27.jpg",
+        "type": "image/jpeg",
+        "sourceHash": "sha256:1a181f5551d502ffa0533b6a7a69bfb72a0936f5da1fa5eb04a4a94fe4c1121b",
+        "sourceFile": "raw/i-19-images/Ind19Drone_Still_27.jpg",
+        "description": "An agricultural spray drone hovers low over a green crop field, releasing a fine mist while a large wind turbine base rises in the background.",
+        "subjects": [
+          "agricultural drone",
+          "spray mist",
+          "wind turbine",
+          "crop field",
+          "rural farmland horizon"
+        ],
+        "composition": "wide",
+        "mood": [
+          "modern",
+          "agritech",
+          "expansive",
+          "clean",
+          "purposeful"
+        ],
+        "bestFor": [
+          "hero",
+          "hero-overlay-dark",
+          "lifestyle-block",
+          "detail-feature",
+          "primary-header-light-bg"
+        ],
+        "dominantColors": [
+          "sky blue",
+          "field green",
+          "white"
+        ],
+        "distinctive": "drone actively spraying mid-flight with a wind turbine in frame, pairing precision agriculture with renewable energy in one shot"
+      },
+      {
+        "logicalName": "i19WideStudio",
+        "url": "https://storage.googleapis.com/bgd-sites/terraplex/i-19-gallery/independence-19-wide.jpg",
+        "type": "image/jpeg",
+        "sourceHash": "sha256:e16d4f77ac75c7327fb8a0fc4b17d81567ec7eebd2987818a21a6ab12d13b6d2",
+        "sourceFile": "raw/i-19-images/Independence 19 Wide.jpg",
+        "description": "A large multi-rotor agricultural drone hovers head-on in a dark studio, its central body wrapped in an American flag livery while six carbon-fiber arms with propellers extend wide to either side.",
+        "subjects": [
+          "agricultural drone",
+          "multi-rotor UAV",
+          "american flag livery",
+          "propellers",
+          "spray tank"
+        ],
+        "composition": "studio-isolation",
+        "mood": [
+          "cinematic",
+          "powerful",
+          "patriotic",
+          "industrial",
+          "moody"
+        ],
+        "bestFor": [
+          "hero",
+          "hero-overlay-dark",
+          "footer-on-dark",
+          "detail-feature",
+          "lifestyle-block"
+        ],
+        "dominantColors": [
+          "charcoal",
+          "red",
+          "ivory"
+        ],
+        "distinctive": "ultra-wide head-on silhouette with stars-and-stripes wrap glowing against a near-black studio backdrop"
+      }
+    ]
   }
 }

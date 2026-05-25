@@ -2,6 +2,24 @@
 
 ## Recent decisions
 
+### 2026-05-24 — Hub asset pipeline + creative-director imagery model (hub v0.5.1)
+
+- New CLI pipeline `scripts/ingest-hub-assets.js` (manager-app side) auto-uploads images from `<hub>/raw/**` to public GCS (`bgd-sites` bucket, `terraplex/<category>/` path), digests each via headless Claude (rich JSON: description, composition, mood, bestFor, dominantColors, distinctive), and appends entries to `<hub>/assets.json`. Idempotent via SHA-256 content hashing. Triggered by `npm run hub:ingest-assets`. Not a file watcher — operator-triggered after dropping files in raw/.
+- `assets.json` schema extended with sibling top-level `assetPools` object (arrays of variants per pool). Existing single-asset entries unchanged. First pools populated: `i19Gallery` (9 entries — 8 in-field action shots + 1 studio isolation), `gteexLogoIconVariants` (3), `gteexLogoFullVariants` (3).
+- **Creative-director model** (NOT deterministic pre-pick at onboarding): images are picked by the building agent during scaffolding, per `guidelines/imagery-direction.md` (new file). Slot-by-slot direction + variety heuristic + anti-patterns. The richness of pool metadata is the substrate the agent reasons over. Justin's rationale: deterministic algorithms (hash dealer→image) make sites feel templated even when variety is guaranteed on paper. Saved as auto-memory `feedback_creative-director-over-deterministic.md` — applies beyond imagery (components, copy variation, section ordering).
+- `HUB-CLAUDE.md` file-authority map updated for the new guideline + `assets.json` pool annotation. New "When referencing an image pool" subsection explains the creative-director contract and points at the guideline. `index.md` registers the new guideline.
+- New helper `uploadPublicAsset()` in `server/services/gcs.js` (sibling to existing `mirrorToGcs` — throws on failure rather than fire-and-forget; returns public HTTPS URL).
+- `hub.version` `0.5.0` → `0.5.1` (additive content change; existing dealers stay on their pin).
+
+### 2026-05-24 — Ingested 2026 I-19 operator + technical manuals into raw/manual-import/
+
+- Two PDFs Justin dropped in `raw/`: V1.3 operator manual (55 pp, 1.4 MB, "INDEPENDENCE 19" / Independence Series, internal title "KING-100 Manual" by Lance Gunderson rebranded for I-19) and V1.0 technical manual (308 pp, 36 MB, by Russell Hedrick).
+- Both moved to `raw/manual-import/gteex-terraplex/` and renamed to the namespace's `<year>-<slug>` convention. Two new structured markdown wiki entries created alongside (TOC + headline specs + safety envelope + editorially-significant verbatim passages; not full-text dumps).
+- **New convention recorded:** PDFs > ~5 MB go in `.gitignore`. The 36 MB tech manual PDF is gitignored; the 1.4 MB operator manual PDF is committed. Standing example documented in [raw/manual-import/README.md](raw/manual-import/README.md).
+- **Spec discrepancy worth knowing:** Sell-sheet headlines (20 gal liquid / 26 gal solids / 40 ft swath) ≠ engineering measurements (19 gal / 25 gal / 38 ft). Per pricing-policy + sell-sheet verbatim-use rule, dealer sites continue with the marketing numbers. Engineering numbers are service/training context only. Rule recorded inline in [products/i-19.md](products/i-19.md).
+- **Reuse caveat:** Tech-manual copyright limits reuse to "owners, users, Dealers, and Distributors." Marketing copy must keep flowing exclusively from the sell-sheet wiki entry; manual content is reference-only.
+- See [log/2026-05-24-i19-manual-ingest.md](log/2026-05-24-i19-manual-ingest.md) for the full ingest record.
+
 ### 2026-05-24 — Field archetype split into Farmhouse + Industrial-Farm variants (hub v0.5.0)
 
 - Field is now a two-variant archetype. The original editorial cream-dominant register is renamed **Farmhouse**; a new **Industrial-Farm** variant inverts surface (loam-dominant), swaps the display family (Big Shoulders Display 800–900 all-caps replaces Fraunces), and elevates wheat from "one kicker in three" to full-saturation signal yellow with a 12%-of-pixels cap.

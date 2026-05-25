@@ -3,3 +3,6 @@ node_modules/
 .env
 .env.local
 *.log
+
+# Large source PDFs (~36 MB) — markdown wiki entry next to it preserves the structured content.
+raw/manual-import/gteex-terraplex/2026-i-19-technical-manual.pdf

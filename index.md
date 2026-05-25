@@ -46,6 +46,7 @@ Global content catalog for the Terraplex hub. Manually-maintained content (produ
 - [guidelines/section-patterns.md](guidelines/section-patterns.md) — common dealer site section structure (Header, Hero, About, etc.)
 - [guidelines/design-do-dont.md](guidelines/design-do-dont.md) — cross-archetype design rules
 - [guidelines/typography.md](guidelines/typography.md) — Terraplex typography defaults (system stack, per-archetype overrides)
+- [guidelines/imagery-direction.md](guidelines/imagery-direction.md) — creative-director brief: how to pick imagery from `assets.json` pools (hero / product / lifestyle / logo); read before any image choice
 
 ## Design (architectural docs)
 
@@ -101,4 +102,4 @@ Two namespaces, different rules. See [raw/README.md](raw/README.md) for routine-
 **Currently in `raw/manual-import/`** (cited by wiki entries):
 - competitors/agri-spray-drones, bestway-drones, dji-agriculture, rantizo (1 homepage snapshot each)
 - competitors/terraplex-corporate (7 page snapshots: homepage, drones, find-a-dealer, terraplex-difference, compliance, test-prep, contact)
-- gteex-terraplex (R-32 + I-19 sell-sheet PDFs converted to markdown)
+- gteex-terraplex (R-32 + I-19 sell-sheet PDFs converted to markdown; **2026 I-19 operator manual V1.3** (55 pp) + **2026 I-19 technical manual V1.0** (308 pp) — both converted to structured markdown wiki entries; user-manual PDF committed, tech-manual PDF gitignored due to 36 MB size)

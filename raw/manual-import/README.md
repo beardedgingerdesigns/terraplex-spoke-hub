@@ -25,7 +25,11 @@ raw/manual-import/
 │   └── terraplex-corporate/<date>-<page>.md
 └── gteex-terraplex/
     ├── <year>-r-32-sell-sheet.md
-    └── <year>-i-19-sell-sheet.md
+    ├── <year>-i-19-sell-sheet.md
+    ├── <year>-i-19-user-manual.md            # operator manual (V1.3) + companion PDF
+    ├── <year>-i-19-user-manual.pdf           # 1.4 MB, committed
+    ├── <year>-i-19-technical-manual.md       # service/tech manual (V1.0)
+    └── <year>-i-19-technical-manual.pdf      # 36 MB, gitignored (kept local only)
 ```
 
 Subdirectory naming follows the source domain or originating brand, normalized to lowercase-with-dashes. The `gteex-terraplex/` subdirectory uses dashes instead of the colon in the original `/reference/gteex:terraplex/` to keep paths cross-platform-safe (colons are reserved on some filesystems).
@@ -38,6 +42,8 @@ Specifically, **do not** import without a citing wiki entry:
 - Meeting transcripts (sensitive, ephemeral)
 - Onboarding questionnaires that duplicate already-captured spoke configs
 - Marketing assets (logos, hero photos) — these go through `assets.json`, not raw/
+
+**Large source binaries** (PDFs > ~5 MB): commit only the derived `.md`; gitignore the binary in [`../../.gitignore`](../../.gitignore) and note "(kept local only)" in the `.md`'s frontmatter/preamble. The 2026 I-19 technical manual PDF (~36 MB) is the standing example.
 
 ## Frontmatter schema
 

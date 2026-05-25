@@ -92,7 +92,7 @@ Each file is authoritative for a specific domain. When the same topic appears in
 | File | Authoritative for |
 | --- | --- |
 | `hub.json` | Hub identity and version |
-| `assets.json` | All shared asset URLs (the only place URLs live) |
+| `assets.json` | All shared asset URLs AND image pools (the only place URLs live; pools managed by `scripts/ingest-hub-assets.js`) |
 | `content/positioning.md` | Terraplex competitive narrative and value proposition language |
 | `content/terminology.md` | Word-level rules (preferred terms, forbidden terms) |
 | `content/reusable-language.md` | Quoted language from the Terraplex corporate site, safe to reuse verbatim |
@@ -106,6 +106,7 @@ Each file is authoritative for a specific domain. When the same topic appears in
 | `guidelines/section-patterns.md` | Common dealer site section structure (Header, Hero, About, etc.) |
 | `guidelines/design-do-dont.md` | Cross-archetype design rules |
 | `guidelines/typography.md` | Terraplex typography defaults (system stack, per-archetype overrides) |
+| `guidelines/imagery-direction.md` | Creative-director brief for choosing imagery (hero/product/logo) from `assets.json` pools — read before picking any image |
 | `spoke/spoke.schema.json` | JSON Schema for per-dealer `spoke.config.json` |
 | `spoke/questionnaire.json` | Onboarding field definitions and allowed values |
 | `spoke/example.spoke.config.json` | Reference spoke config (shape demonstration only) |
@@ -132,6 +133,18 @@ Use the logical name from `assets.json`. Examples:
 - In spoke config logo paths: the spoke's own dealer logo URL is a dealer concern — it does NOT need to be in `assets.json`. Only shared Terraplex assets do.
 
 Never paste a `https://storage.googleapis.com/...` URL into anything that isn't `assets.json`. If you find one, move it.
+
+## When referencing an image pool
+
+`assets.json` carries two kinds of entries: top-level **single assets** (one logical name → one URL, hand-curated, examples above) and **image pools** under `assetPools.<poolName>` (arrays of variants, populated by the ingest pipeline).
+
+Pool entries are not picked deterministically per dealer. They're picked by **you, the building agent, at scaffolding time**, per the creative-director model. Before reaching for any image from a pool:
+
+1. Read [`guidelines/imagery-direction.md`](guidelines/imagery-direction.md). It's the creative-director brief — covers slot-by-slot direction (hero / product card / lifestyle / detail / footer / logo), variety heuristics, and anti-patterns.
+2. Read the pool entries' metadata (`description`, `composition`, `mood`, `bestFor`, `distinctive`). The `distinctive` field is the most important — it's the editorial reason to pick this variant over its neighbors.
+3. Justify your pick in a scaffolding comment so a reviewer can audit the choice.
+
+Pools are managed by `scripts/ingest-hub-assets.js` in the manager-app repo. The `sourceHash` field on pool entries is pipeline-managed — don't hand-edit. To add a new image to a pool, drop the file in `raw/<subdir>/` and run `npm run hub:ingest-assets`.
 
 ## What this hub does not cover
 
