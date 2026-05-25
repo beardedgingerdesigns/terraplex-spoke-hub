@@ -2,6 +2,17 @@
 
 ## Recent decisions
 
+### 2026-05-24 — Field archetype split into Farmhouse + Industrial-Farm variants (hub v0.5.0)
+
+- Field is now a two-variant archetype. The original editorial cream-dominant register is renamed **Farmhouse**; a new **Industrial-Farm** variant inverts surface (loam-dominant), swaps the display family (Big Shoulders Display 800–900 all-caps replaces Fraunces), and elevates wheat from "one kicker in three" to full-saturation signal yellow with a 12%-of-pixels cap.
+- Driven by Superior Drone build session. Editorial Farmhouse register undersells equipment-buyer / FAA Part 137 / repair-shop dealers — they expect the site to read like a piece of equipment, not a Sunday paper feature. Full proposal in `sites/superior-drone-llc/FIELD-DIRECTION-BRIEF.md`.
+- Mechanics: `hubs/terraplex/archetypes/field/` now contains `farmhouse.md`, `industrial-farm.md`, and `shared.md` (common palette tokens + base anti-patterns). `field.md` is preserved as the overview/index pointing to variants — back-compat for any external doc still linking it.
+- Selection: `spoke.config.json` → `identity.archetypeVariant` (enum `farmhouse | industrial-farm`). Omitted = `farmhouse` (preserves v0.4.0 behavior for any existing Field dealer that doesn't re-pin).
+- New palette tokens added: `--loam-deep` (`#0E0906`) for cred-row inhale-darker moments, `--wheat-bright` (`#F0B948`) for Industrial-Farm hover lift. Both live in `field/shared.md`.
+- Default for new Terraplex dealers: equipment-selling dealers (drones, sprayers at $10K+) default to Industrial-Farm; pure custom-application-services and CSA/heritage-seed dealers default to Farmhouse. Prairie Aerial stays Farmhouse; Superior Drone is the canonical Industrial-Farm example.
+- Snapshot logic in `server/services/sites.js` → `snapshotArchetypeIntoSite()` updated to read the variant file plus `sharedFile`, concatenate, and write to dealer's `_archetype.md`. Legacy single-file archetypes unaffected.
+- Bumped hub version to **0.5.0**. Per lazy-rollout convention, existing Field dealers (`prairie-aerial`) stay pinned at v0.4.0 until next propagation; Superior Drone's spoke.config.json now declares `archetypeVariant: "industrial-farm"` but stays pinned at v0.4.0 — re-pins on next scaffold/propagation.
+
 ### 2026-04-23 — Structural fix: hub symlinked into every spoke's cwd
 
 - Problem surfaced when a Black Knight chat session asked for Kit 1 / MSRP pricing. Claude correctly couldn't find it — **because Claude running with `cwd: sites/black-knight/` can only read files at or below cwd, and the hub physically lives at `../../hubs/`** (outside the site's git scope). The site's CLAUDE.md says "hub at `hubs/terraplex/`" but from Claude's perspective that path didn't exist.
@@ -69,9 +80,14 @@ No real spokes exist yet, so breaking changes are safe. `hub.json` version bumpe
 
 - **I-19 product image** — currently reuses `heroPoster` URL. Briefing confirms this is intentional, not a bug, but worth revisiting with the owner when a dedicated I-19 product image exists.
 - **Typography override for `field` archetype** — briefing notes `field` permits a display serif. Hub has no specific font recommendation yet; left to dealer/Claude decision during onboarding.
+- **(2026-05-24) "Scout" mission profile for I-19** — sell-sheet language advertises "Spray • Spread • Scout" with Scout flagged as I-19-unique. Neither 2026 manual documents a Scout mode (operator manual §7.4 lists only Route / AB Point / Manual / Enhanced Manual). The front FPV camera enables visual reconnaissance — best guess is Scout = marketing wrapper for FPV viewing, not a discrete mode. **Verify with Jack Schroeder / Terraplex brand contact before dealer detail pages repeat the claim.** Until verified, dealer detail pages should treat Scout as "FPV scouting view" (a capability, not a mission mode) or omit it. Sell-sheet body copy in [products/i-19.md](products/i-19.md) is left intact (verbatim-rule) but the new "Product detail page content" section flags the issue.
 
 ## Follow-ups
 
 - Phase 2 — migrate the 4 existing dealer site repos (`pyro-ag`, `black-knight`, `new-heights`, `great-river`) to reference this hub via a `spoke.config.json` file. That will also validate the `spoke.schema.json`.
 - Phase 2 — decide fate of `data/site-template-CLAUDE.md` in the manager app (likely deprecated in favor of hub + spoke + platform scaffolder).
 - When the hub gets its first content bump, document the version-bump + dealer-upgrade flow in `HUB-CLAUDE.md` (currently just a warning).
+- **(2026-05-24) Surface Service Reports on dealer detail pages.** Tech manual §6.11.6: every mission auto-generates a customer-ready report (acreage flown, area sprayed, exclusion area, flight time, total product, per-unit usage). Add to product detail pages (not homepage). Pattern documented in [products/i-19.md](products/i-19.md) — Detail page content section. Platform-level — applies to R-32 too.
+- **(2026-05-24) Add right-to-repair / owner-maintainable positioning beat to dealer detail pages.** Russell's tech-manual foreword directly endorses owner repair. Sharper differentiator vs DJI's locked-down ecosystem than anything currently on dealer sites. Pair with dealer parts/service capability. Platform-level. Pattern in [products/i-19.md](products/i-19.md).
+- **(2026-05-24) Add IP65 / IP67 weather-resistance to detail-page spec table** (NOT homepage hero spec block). Confirmed in I-19 operator manual §2.5 / §3.1. **R-32 IP rating not yet documented — confirm before publishing on R-32 detail pages** (likely platform-level since both share the GTEEX REVOLUTION chassis line, but unverified). Position as resistance, not invincibility — liquid damage is not warranty-covered.
+- **(2026-05-24) Ingest R-32 operator + technical manuals when available.** Three of the four I-19 detail-page beats (Service Reports / right-to-repair / IP rating) are likely-but-unverified for R-32. R-32 detail-page guidance in [products/r-32.md](products/r-32.md) carries the caveat until manuals confirm.

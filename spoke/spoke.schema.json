@@ -87,6 +87,11 @@
           "enum": ["forge", "tactical", "terrain", "clean", "field", "patriot"],
           "description": "Design archetype id from archetypes/_index.json. Determines theme, hero treatment, card style, and typography approach."
         },
+        "archetypeVariant": {
+          "type": "string",
+          "description": "Optional variant of the selected archetype. Currently only Field has variants: 'farmhouse' (default if omitted, editorial cream-dominant register) or 'industrial-farm' (loam-dominant equipment register with wheat-as-signal). Other archetypes ignore this field. Variant ids must match an entry in archetypes/_index.json under the archetype's variants array.",
+          "enum": ["farmhouse", "industrial-farm"]
+        },
         "accent": {
           "type": "object",
           "description": "Dealer's brand accent color system. Primary is the main brand color. Secondary is used when mode is 'gradient' or 'dual'.",

@@ -13,6 +13,10 @@
         {
           "dealer": "pyro-ag",
           "accent": "#ea580c"
+        },
+        {
+          "dealer": "iron-ridge-aerial",
+          "accent": "#B5231C"
         }
       ]
     },
@@ -71,15 +75,49 @@
     {
       "id": "field",
       "displayName": "Field",
-      "tagline": "Light with earth tones. Agricultural.",
+      "tagline": "Warm earth tones. Two variants: editorial Farmhouse or equipment-register Industrial-Farm.",
       "file": "field.md",
       "vibes": [
         "Farm-focused/Down-to-earth"
       ],
+      "variants": [
+        {
+          "id": "farmhouse",
+          "displayName": "Farmhouse",
+          "tagline": "Cream-dominant editorial register. Display serif + humanist sans. Sparing wheat accent.",
+          "file": "field/farmhouse.md",
+          "default": true,
+          "fitsWhen": [
+            "Family operation, CSA, heritage seed, farm-stay",
+            "Custom-application service with no equipment-sale ticket",
+            "Differentiator is the operator's care, not the rig"
+          ]
+        },
+        {
+          "id": "industrial-farm",
+          "displayName": "Industrial-Farm",
+          "tagline": "Loam-dominant equipment register. Condensed industrial sans all-caps. Wheat as full-saturation signal yellow.",
+          "file": "field/industrial-farm.md",
+          "default": false,
+          "fitsWhen": [
+            "Equipment sales at $10K+ ticket (drones, sprayers, trailers)",
+            "FAA / DOT / OSHA-regulated services",
+            "Repair / parts / service shops",
+            "Differentiator is the equipment itself"
+          ]
+        }
+      ],
+      "sharedFile": "field/shared.md",
       "takenBy": [
         {
           "dealer": "prairie-aerial",
-          "accent": "#92400E"
+          "accent": "#92400E",
+          "variant": "farmhouse"
+        },
+        {
+          "dealer": "superior-drone-llc",
+          "accent": "#003911",
+          "variant": "industrial-farm"
         }
       ]
     },
@@ -103,5 +141,5 @@
       ]
     }
   ],
-  "uniquenessRule": "No two dealer sites should use the same archetype + accent color combination. When onboarding a new dealer, check the `takenBy` arrays before proposing an archetype/accent. Update this file when a dealer is onboarded or their archetype/accent changes."
+  "uniquenessRule": "No two dealer sites should use the same archetype + accent color combination. When onboarding a new dealer, check the `takenBy` arrays before proposing an archetype/accent. For archetypes with variants (currently Field), the variant does NOT factor into uniqueness — Farmhouse and Industrial-Farm on the same accent would still collide. Update this file when a dealer is onboarded or their archetype/accent/variant changes."
 }
