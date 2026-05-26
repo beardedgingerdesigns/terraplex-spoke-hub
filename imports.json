@@ -1,0 +1,12 @@
+{
+  "imports": [
+    {
+      "artifact": "_upstream/revolution/products/r-32.json",
+      "upstream_tenant": "revolution",
+      "upstream_artifact": "products/r-32.json",
+      "upstream_version": "v1",
+      "imported_at": "2026-05-26T02:24:18.584Z",
+      "imported_by": "bootstrap-p4"
+    }
+  ]
+}

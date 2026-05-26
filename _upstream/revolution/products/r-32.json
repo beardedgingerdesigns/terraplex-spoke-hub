@@ -1,0 +1,15 @@
+{
+  "id": "r-32",
+  "version": "v1",
+  "officialName": "R-32 by Revolution Drones",
+  "platform": "Revolution",
+  "specs": {
+    "acresPerDay": "1,200-1,600",
+    "applicationSpeedMph": 43,
+    "tankCapacityGallons": 32,
+    "maxPayloadLbs": 330,
+    "navigation": "360-degree radar with forward LiDAR"
+  },
+  "warranty": "Industry-leading warranty (terms TBD in skeleton).",
+  "notes": "Manufacturer-source spec for the GTEEX Revolution R-32 platform. The propagation demo bumps specs.acresPerDay (e.g. \"1,200-1,600\" -> \"1,200-1,800\") to exercise the import + pin pipeline downstream to Terraplex's _upstream/revolution/ pin and into dealer sites' hub: markers. The distributor (Terraplex) hub's own products/r-32.json holds dealer-facing display copy and is NOT overwritten by propagation."
+}
