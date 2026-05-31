@@ -23,7 +23,7 @@ Both values are "Starting MSRP" — additional kits, configurations, and add-ons
 
 3. **Upgrade paths go to the phone.** Keep a `Request Pricing` (or equivalent) CTA alongside any MSRP display. Anyone price-shopping for non-base configurations needs to talk to the dealer, not discover a configurator on the website.
 
-4. **No dealer cost, margin, or sub-dealer pricing.** These are confidential business-to-business data. See `content/content-exclusions.md`.
+4. **No dealer cost, margin, or sub-dealer pricing.** These are confidential business-to-business data. See [content-exclusions.md](content-exclusions.md).
 
 5. **Don't surround MSRP with discount language.** Framing like "Normally $80k, now $72k" creates ambiguity about what the advertised price actually is and invites MAP scrutiny.
 

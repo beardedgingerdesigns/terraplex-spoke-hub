@@ -38,7 +38,10 @@ Global content catalog for the Terraplex hub. Manually-maintained content (produ
 - [archetypes/tactical.md](archetypes/tactical.md) — TACTICAL: pure black, geometric precision, corner brackets, video hero
 - [archetypes/terrain.md](archetypes/terrain.md) — TERRAIN: alternating light/dark bands, contour-line motifs
 - [archetypes/clean.md](archetypes/clean.md) — CLEAN: white/gray-50 light theme, video hero with brand-tinted overlay
-- [archetypes/field.md](archetypes/field.md) — FIELD: warm cream/amber palette, photographic hero (no video), organic shapes
+- [archetypes/field.md](archetypes/field.md) — FIELD: warm earth-tone palette, two-variant archetype (Farmhouse + Industrial-Farm) split per hub v0.5.0
+  - [archetypes/field/farmhouse.md](archetypes/field/farmhouse.md) — Farmhouse variant: cream-dominant editorial register for family farm / CSA / heritage-seed / custom-application dealers
+  - [archetypes/field/industrial-farm.md](archetypes/field/industrial-farm.md) — Industrial-Farm variant: loam-dominant equipment register for equipment-selling / Part 137 / repair-shop dealers
+  - [archetypes/field/shared.md](archetypes/field/shared.md) — shared palette tokens + base anti-patterns common to both variants
 - [archetypes/patriot.md](archetypes/patriot.md) — PATRIOT: flag-inspired graphics, diagonal stripes, star motifs
 
 ## Guidelines
