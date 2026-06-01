@@ -74,12 +74,15 @@ Global content catalog for the Terraplex hub. Manually-maintained content (produ
 - [research/manufacturers/terraplex.md](research/manufacturers/terraplex.md) — Terraplex Ag profile: parent brand, exclusive GTEEX Revolution distributor, 49-location dealer network, in-house compliance via Sam Welton (created 2026-05-01)
 - [research/manufacturers/dji-agras.md](research/manufacturers/dji-agras.md) — DJI Agras profile: T-series lineup (T100/T70P/T50/T25/T30/T20/T10), FCC ruling, $1.5B exposure (last refreshed 2026-05-01)
 - [research/manufacturers/hylio.md](research/manufacturers/hylio.md) — Hylio profile: AG-230/HYL-150 ARES, swarm throughput, $2M raise, Texas plant (last refreshed 2026-05-01)
+- [research/manufacturers/xag.md](research/manufacturers/xag.md) — XAG profile: V40/P40/P100/P100 Pro/P150 lineup, Pegasus Robotics + Rantizo US channel, FCC Covered List exposure parallel to DJI (created 2026-06-01)
+- [research/manufacturers/yamaha.md](research/manufacturers/yamaha.md) — Yamaha profile: R-MAX / FAZER heritage spray helicopters (2,800 global installed base), January 2025 Yamaha Agriculture US launch (Bay Area HQ, Robotics Plus + The Yield acquisitions), Prospr ground-autonomy pivot (created 2026-06-01)
 
 ### Dealer economics
 - [research/dealer-economics/competitor-distributors.md](research/dealer-economics/competitor-distributors.md) — Agri Spray Drones, Bestway Ag, Rantizo: structural comparison vs Terraplex's distributor model
 
 ### Regulatory
 - [research/regulatory/2026-04-update.md](research/regulatory/2026-04-update.md) — April 2026 regulatory roundup: USDA NPG-Ag launch, FAA Part 108 status, DJI appeal
+- [research/regulatory/2026-05-update.md](research/regulatory/2026-05-update.md) — May 2026 regulatory roundup: FCC DA 26-454 firmware-waiver extension to 2029, FAA Section 2209 NPRM (Docket FAA-2026-4558, comments due July 6), DJI/Autel reconsideration window closed, Texas AG Drone Nerds CID, AUVSI XPONENTIAL policy alignment
 
 ### Daily digests
 - [research/digests/index.md](research/digests/index.md) — daily industry digests catalog (newest-first; one-line summary per digest)
