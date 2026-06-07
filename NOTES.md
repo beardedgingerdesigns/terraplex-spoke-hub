@@ -16,7 +16,7 @@
 - New CLI pipeline `scripts/ingest-hub-assets.js` (manager-app side) auto-uploads images from `<hub>/raw/**` to public GCS (`bgd-sites` bucket, `terraplex/<category>/` path), digests each via headless Claude (rich JSON: description, composition, mood, bestFor, dominantColors, distinctive), and appends entries to `<hub>/assets.json`. Idempotent via SHA-256 content hashing. Triggered by `npm run hub:ingest-assets`. Not a file watcher — operator-triggered after dropping files in raw/.
 - `assets.json` schema extended with sibling top-level `assetPools` object (arrays of variants per pool). Existing single-asset entries unchanged. First pools populated: `i19Gallery` (9 entries — 8 in-field action shots + 1 studio isolation), `gteexLogoIconVariants` (3), `gteexLogoFullVariants` (3).
 - **Creative-director model** (NOT deterministic pre-pick at onboarding): images are picked by the building agent during scaffolding, per `guidelines/imagery-direction.md` (new file). Slot-by-slot direction + variety heuristic + anti-patterns. The richness of pool metadata is the substrate the agent reasons over. Justin's rationale: deterministic algorithms (hash dealer→image) make sites feel templated even when variety is guaranteed on paper. Saved as auto-memory `feedback_creative-director-over-deterministic.md` — applies beyond imagery (components, copy variation, section ordering).
-- `HUB-CLAUDE.md` file-authority map updated for the new guideline + `assets.json` pool annotation. New "When referencing an image pool" subsection explains the creative-director contract and points at the guideline. `index.md` registers the new guideline.
+- `WIKI-CLAUDE.md` file-authority map updated for the new guideline + `assets.json` pool annotation. New "When referencing an image pool" subsection explains the creative-director contract and points at the guideline. `index.md` registers the new guideline.
 - New helper `uploadPublicAsset()` in `server/services/gcs.js` (sibling to existing `mirrorToGcs` — throws on failure rather than fire-and-forget; returns public HTTPS URL).
 - `hub.version` `0.5.0` → `0.5.1` (additive content change; existing dealers stay on their pin).
 
@@ -62,7 +62,7 @@
 
 - Added `msrp` object to `products/r-32.json` (`$72,000`) and `products/i-19.json` (`$46,250`) with `amount`, `formatted`, `label`, `disclaimer`, `source`, `usage` fields. Source: Jack Schroeder confirmation 2026-03-30.
 - Added `content/pricing-policy.md` with full MAP rules: advertise MSRP only, no actual transaction prices or discount framing, no dealer cost / margin / sub-dealer pricing, no kit-tier exposure on public sites. Recommended treatment + concrete examples of compliant / non-compliant copy.
-- Registered the new file in `HUB-CLAUDE.md` content table.
+- Registered the new file in `WIKI-CLAUDE.md` content table.
 
 Why: MSRP + MAP policy was previously only documented in Truss's per-site NOTES.md (decided during their 2026-04-22 build). Four other dealers pinned to v0.3.0 had no access to it — they'd have to rediscover the numbers and the policy each time. Moving it into hub canon makes it propagable via the normal spoke-version-bump flow.
 
@@ -95,7 +95,7 @@ Why: surfaced during paper dry-run of Pyro Ag migration. Fixing on paper before 
 
 No real spokes exist yet, so breaking changes are safe. `hub.json` version bumped `0.1.0 → 0.2.0`. `schemaVersion` stays at `1` (directory structure unchanged).
 
-`HUB-CLAUDE.md` scanned for literal references to `accentColor`, `"basic"`, `"qualified"` — none found. Left untouched.
+`WIKI-CLAUDE.md` scanned for literal references to `accentColor`, `"basic"`, `"qualified"` — none found. Left untouched.
 
 ### Earlier (2026-04-19) — v0.1.0
 
@@ -113,7 +113,7 @@ No real spokes exist yet, so breaking changes are safe. `hub.json` version bumpe
 
 - Phase 2 — migrate the 4 existing dealer site repos (`pyro-ag`, `black-knight`, `new-heights`, `great-river`) to reference this hub via a `spoke.config.json` file. That will also validate the `spoke.schema.json`.
 - Phase 2 — decide fate of `data/site-template-CLAUDE.md` in the manager app (likely deprecated in favor of hub + spoke + platform scaffolder).
-- When the hub gets its first content bump, document the version-bump + dealer-upgrade flow in `HUB-CLAUDE.md` (currently just a warning).
+- When the hub gets its first content bump, document the version-bump + dealer-upgrade flow in `WIKI-CLAUDE.md` (currently just a warning).
 - **(2026-05-24) Surface Service Reports on dealer detail pages.** Tech manual §6.11.6: every mission auto-generates a customer-ready report (acreage flown, area sprayed, exclusion area, flight time, total product, per-unit usage). Add to product detail pages (not homepage). Pattern documented in [products/i-19.md](products/i-19.md) — Detail page content section. Platform-level — applies to R-32 too.
 - **(2026-05-24) Add right-to-repair / owner-maintainable positioning beat to dealer detail pages.** Russell's tech-manual foreword directly endorses owner repair. Sharper differentiator vs DJI's locked-down ecosystem than anything currently on dealer sites. Pair with dealer parts/service capability. Platform-level. Pattern in [products/i-19.md](products/i-19.md).
 - **(2026-05-24) Add IP65 / IP67 weather-resistance to detail-page spec table** (NOT homepage hero spec block). Confirmed in I-19 operator manual §2.5 / §3.1. **R-32 IP rating not yet documented — confirm before publishing on R-32 detail pages** (likely platform-level since both share the GTEEX REVOLUTION chassis line, but unverified). Position as resistance, not invincibility — liquid damage is not warranty-covered.

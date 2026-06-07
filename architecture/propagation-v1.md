@@ -1,7 +1,7 @@
 # Phase 3 — Propagation Design v1
 
 *Draft v0.1 — April 21, 2026*
-*Location: `hubs/terraplex/design/propagation-v1.md`*
+*Location: `hubs/terraplex/architecture/propagation-v1.md`*
 
 This document specifies how Phase 3 hub-to-spoke content propagation works for the Terraplex hub. It's a design document, not an implementation spec — it decides behaviors and tradeoffs; subsequent Claude Code briefings will implement them.
 

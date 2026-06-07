@@ -7,7 +7,7 @@ Global content catalog for the Terraplex hub. Manually-maintained content (produ
 ## Hub root
 
 - [README.md](README.md) — high-level overview of what this hub is and how it fits into the BGD platform
-- [HUB-CLAUDE.md](HUB-CLAUDE.md) — Claude Code session instructions, architectural ground rules, file-authority map, wiki operations
+- [WIKI-CLAUDE.md](WIKI-CLAUDE.md) — Claude Code session instructions, architectural ground rules, file-authority map, wiki operations, decisions lifecycle
 - [NOTES.md](NOTES.md) — working memory: recent decisions, open questions, follow-ups
 - [feature-gaps.md](feature-gaps.md) — platform capability gaps and editorial restrictions
 - [hub.json](hub.json) — hub manifest (name, version, schemaVersion)
@@ -48,10 +48,14 @@ Global content catalog for the Terraplex hub. Manually-maintained content (produ
 - [guidelines/typography.md](guidelines/typography.md) — Terraplex typography defaults (system stack, per-archetype overrides)
 - [guidelines/imagery-direction.md](guidelines/imagery-direction.md) — creative-director brief: how to pick imagery from `assets.json` pools (hero / product / lifestyle / logo); read before any image choice
 
-## Design (architectural docs)
+## Architecture
 
-- [design/propagation-v1.md](design/propagation-v1.md) — propagation architecture: how hub edits roll out to dealer sites
-- [design/variance-strategy.md](design/variance-strategy.md) — component-library + treatment-spec model for dealer site variance
+- [architecture/propagation-v1.md](architecture/propagation-v1.md) — propagation architecture: how hub edits roll out to dealer sites
+- [architecture/variance-strategy.md](architecture/variance-strategy.md) — component-library + treatment-spec model for dealer site variance
+
+## Decisions
+
+- [decisions/index.md](decisions/index.md) — hub-level decisions with lifecycle tracking (active, deferred, implemented, superseded)
 
 ## Spoke (per-dealer schema)
 

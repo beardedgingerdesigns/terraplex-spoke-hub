@@ -1,7 +1,7 @@
 # Variance Strategy v1
 
 *Draft v0.1 — April 21, 2026*
-*Location: `hubs/terraplex/design/variance-strategy.md`*
+*Location: `hubs/terraplex/architecture/variance-strategy.md`*
 
 This document describes how dealer site variance grows over time without blocking Phase 3 propagation work. It's forward-looking and deliberately non-blocking: nothing in here changes the four existing dealers; nothing here depends on Phase 3 landing first; and nothing here is urgent.
 

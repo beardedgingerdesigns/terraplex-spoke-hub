@@ -8,7 +8,7 @@ Curated by Claude Code during chat / design-foundation runs when Refero surfaces
 
 ## `<section>/<treatment-name>.md` — authored treatment specs (future)
 
-Reserved for the variance-strategy v1 authoring layer (see [hubs/terraplex/design/variance-strategy.md](../design/variance-strategy.md) §3). Each spec describes a coherent treatment with example HTML / CSS, allowed-archetype list, and required-data fields. **Authored by a human (Justin) during dedicated authoring sessions. Runtime never writes here.**
+Reserved for the variance-strategy v1 authoring layer (see [hubs/terraplex/architecture/variance-strategy.md](../architecture/variance-strategy.md) §3). Each spec describes a coherent treatment with example HTML / CSS, allowed-archetype list, and required-data fields. **Authored by a human (Justin) during dedicated authoring sessions. Runtime never writes here.**
 
 The two namespaces coexist by convention: research notes live inside `research/` subfolders; treatment specs sit flat at the section root.
 
@@ -16,7 +16,7 @@ The two namespaces coexist by convention: research notes live inside `research/`
 
 ## Sections
 
-Mirrors the section taxonomy in [variance-strategy.md §4](../design/variance-strategy.md):
+Mirrors the section taxonomy in [variance-strategy.md §4](../architecture/variance-strategy.md):
 
 - `hero/`
 - `product-block/`

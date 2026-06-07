@@ -32,9 +32,9 @@ BGD Site Manager (manager app)
 - `hub.json` — hub manifest (name, version, schemaVersion)
 - `assets.json` — URL manifest — the only place raw URLs live
 - `feature-gaps.md` — what the platform can't do yet, and what Terraplex has chosen not to offer
-- `HUB-CLAUDE.md` — session instructions for Claude Code when editing this repo
+- `WIKI-CLAUDE.md` — session instructions for Claude Code when editing this repo (wiki schema, decisions lifecycle, file authority map)
 - `NOTES.md` — working memory (recent decisions, open questions, follow-ups)
 
 ## For Claude Code sessions
 
-Read `HUB-CLAUDE.md` before editing anything in this repo.
+Read `WIKI-CLAUDE.md` before editing anything in this repo.
