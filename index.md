@@ -84,6 +84,13 @@ Global content catalog for the Terraplex hub. Manually-maintained content (produ
 - [research/regulatory/2026-04-update.md](research/regulatory/2026-04-update.md) — April 2026 regulatory roundup: USDA NPG-Ag launch, FAA Part 108 status, DJI appeal
 - [research/regulatory/2026-05-update.md](research/regulatory/2026-05-update.md) — May 2026 regulatory roundup: FCC DA 26-454 firmware-waiver extension to 2029, FAA Section 2209 NPRM (Docket FAA-2026-4558, comments due July 6), DJI/Autel reconsideration window closed, Texas AG Drone Nerds CID, AUVSI XPONENTIAL policy alignment
 
+### Competitive positioning
+- [research/positioning/index.md](research/positioning/index.md) — biweekly positioning research (newest-first; four files: market-overview + vs-dji + vs-hylio + vs-xag). Created 2026-06-07.
+  - [research/positioning/market-overview.md](research/positioning/market-overview.md) — US ag-drone market dynamics, three domestic tiers, FCC/NDAA/FAA regulatory landscape, six 2026 dealer trends
+  - [research/positioning/vs-dji.md](research/positioning/vs-dji.md) — Revolution vs DJI Agras head-to-head
+  - [research/positioning/vs-hylio.md](research/positioning/vs-hylio.md) — Revolution vs Hylio head-to-head
+  - [research/positioning/vs-xag.md](research/positioning/vs-xag.md) — Revolution vs XAG head-to-head
+
 ### Daily digests
 - [research/digests/index.md](research/digests/index.md) — daily industry digests catalog (newest-first; one-line summary per digest)
 

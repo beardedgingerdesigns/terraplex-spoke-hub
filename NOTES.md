@@ -2,6 +2,15 @@
 
 ## Recent decisions
 
+### 2026-06-07 — First biweekly positioning research run
+
+- Created `research/positioning/` with market-overview + vs-dji + vs-hylio + vs-xag + index. Added section to global `index.md`.
+- **Key finding: Hylio's NDAA claim needs an asterisk.** Hylio markets ARES as "NDAA compliant hardware" but batteries are still China-sourced. KULR Texas battery JDA (Feb 2026) is in development, not shipping. Revolution/GTEEX is NDAA-natively-compliant by design. This distinction is now documented in `vs-hylio.md` and `market-overview.md`.
+- **Three-tier domestic landscape solidified.** Revolution/GTEEX (fully NDAA-native), Hylio (US-engineered, battery gap closing), Elevon Aerial Ag (conditional approval only, time-limited to Dec 2026, must renew annually). This framing replaces the simpler "US vs foreign" binary.
+- **Flag for human review: DJI T55 authorization conflict.** One off-allowlist source (dronefly.com) claims DJI received pre-ban FCC authorization for the Agras T55. This contradicts allowlisted digests 2026-05-29 and 2026-06-02 which state T55 remains blocked. Dealers should treat T55 as unavailable for new US sale until Justin/Terraplex confirms otherwise. Noted in `vs-dji.md` Recent Developments.
+- **New Hylio pricing data.** AG-230 ~$31K without kit; ATLAS ~$59,999 (from search snippets, off-allowlist listings). Consistent with the MSRP positioning for I-19 ($46,250) and R-32 ($72,000). Hylio ARES HYL-150 (13 gal, 40-ft, 50+ ac/hr) is now Hylio's primary recommended platform over the AG-230.
+- All WebFetch calls returned HTTP 403 — consistent with the outbound-block pattern in the digest environment. No raw snapshots saved.
+
 ### 2026-05-24 — Hub asset pipeline + creative-director imagery model (hub v0.5.1)
 
 - New CLI pipeline `scripts/ingest-hub-assets.js` (manager-app side) auto-uploads images from `<hub>/raw/**` to public GCS (`bgd-sites` bucket, `terraplex/<category>/` path), digests each via headless Claude (rich JSON: description, composition, mood, bestFor, dominantColors, distinctive), and appends entries to `<hub>/assets.json`. Idempotent via SHA-256 content hashing. Triggered by `npm run hub:ingest-assets`. Not a file watcher — operator-triggered after dropping files in raw/.
